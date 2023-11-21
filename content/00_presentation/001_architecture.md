@@ -17,11 +17,11 @@ This setup allows for a comprehensive understanding of the relationship between 
 
 ## Red Hat Products
 
-* The multi-cluster management capabilities are powered by *** Red Hat Advanced Cluster Management (RHACM) ***, offering comprehensive control and oversight across interconnected clusters.
+* The multi-cluster management capabilities are powered by ***Red Hat Advanced Cluster Management (RHACM)***, offering comprehensive control and oversight across interconnected clusters.
 
-* For stringent and proactive security measures, we rely on *** Red Hat Advanced Cluster Security (RHACS) ***, ensuring robust protection and policy enforcement.
+* For stringent and proactive security measures, we rely on ***Red Hat Advanced Cluster Security (RHACS)***, ensuring robust protection and policy enforcement.
 
-* Additionally, the container image repository is supported by *** Red Hat Quay ***, offering secure storage and distribution of container images.
+* Additionally, the container image repository is supported by ***Red Hat Quay***, offering secure storage and distribution of container images.
 * 
 While this lab is currently hosted on the Red Hat Product Demo System (RHPDS) due to logistical and cost considerations, there are possibilities for future deployments:
 

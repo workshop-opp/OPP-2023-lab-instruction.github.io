@@ -4,15 +4,35 @@ draft: false
 weight: 0
 ---
 
-For the rest of this Lab, you will work in pair programming.
-With your team members, pair up and assign roles!
+## Goal:
+Resolve deployment failure caused by quota limitations and successfully deploy the application by adjusting OpenShift quotas.
 
-* Duo **A** is in charge of implementing the code on ESP8266 to scan the **incoming** parcels using RFID and send the data over MQTT.
-* Duo **B** is in charge of implementing the code on ESP8266 to scan the **outgoing** parcels using RFID and send the data over MQTT.
-* Duo **C** is in charge of setting up Kafka Broker and implementing the Camel-K integration.
+## Actions:
+Attempt to deploy the application in OpenShift.
 
-At the end, you should have three pairs (or duos).
+Use 
+```shell
+oc new-app <application_manifest> to initiate deployment.
+```
+Click on the "Deploy" button in the OpenShift console.
+Identify resource constraints in RHACM's Grafana.
 
-**Tip**: On your name tent, write your duo's name (**A**, **B** or **C**)!
+Access RHACM's Grafana dashboard.
+Select the cluster, navigate to "Observability" > "Grafana".
+Observe resource utilization metrics.
+Confirm quota issues impacting deployment.
 
-Now, pick up the tasks assigned to your duo in the left menu!
+Review Grafana metrics indicating resource constraints.
+Adjust quotas in OpenShift.
+
+Locate "Resource Quotas" in the OpenShift console.
+Edit the specific quota impacted by the deployment issue.
+Increase resource limits as needed.
+Redeploy the application.
+
+Use 
+```
+oc rollout latest <application_deployment> 
+```
+for redeployment.
+Monitor deployment status for successful completion.

@@ -1,5 +1,5 @@
 ---
 title: "Cluster Compliance"
 draft: false
-weight: 3
+weight: 2
 ---

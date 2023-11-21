@@ -1,7 +1,7 @@
 ---
-title: "Pair up!"
+title: "Resource Diagnosis"
 draft: false
-weight: 2
+weight: 0
 ---
 
 For the rest of this Lab, you will work in pair programming.

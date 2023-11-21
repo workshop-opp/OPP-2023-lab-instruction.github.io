@@ -5,6 +5,7 @@ draft: false
 weight: 1
 ---
 
+## Goal
 
 Your goal will be to Facilitate Scale and Security for Your OpenShift Clusters with OpenShift Platform Plus through immersive exploration. Dive into Advanced Cluster Management (ACM), where you'll diagnose resource constraints, refine placement rules for multi-cloud deployment, and delve into the world of GitOps, automating deployments to proactively address issues akin to real incident resolution scenarios.
 

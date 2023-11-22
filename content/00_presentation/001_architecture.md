@@ -6,7 +6,8 @@ weight: 2
 
 ## Architecture
 
-![use_case](/images/detailled-schema.svg)
+![lab Architecture](/OPP-2023-lab-instruction.github.io/images/lab-architecture.png)
+
 
 
 The lab architecture will leverage two distinct OpenShift clusters to facilitate an immersive learning experience. Firstly, a designated Hub cluster will serve as the foundation for hosting the Red Hat Advanced Cluster Management (RHACM) and Red Hat Advanced Cluster Security (RHACS) tools. This cluster will act as the centralized control and management hub.

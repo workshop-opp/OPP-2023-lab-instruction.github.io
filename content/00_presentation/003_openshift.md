@@ -6,11 +6,15 @@ weight: 4
 
 ## OpenShift cluster
 
-An OpenShift cluster is already deployed via **RHPDS** environment and **"OpenShift 4.14 Workshop"** service.
+3 OpenShift clusters are already deployed via **RHPDS** environment and **"AWS Blank Open Environemnt"** service :
+
+* Hub Cluster
+* SNO Dev Cluster
+* SNO Prod Cluster
 
 **No action is required on your side.**
 
-![RHPDS Service](/images/rhpds_service.png)
+![RHPDS Service](/OPP-2023-lab-instruction.github.io/images/aws-blank-open.png)
 
 
 ## OpenShift cluster details

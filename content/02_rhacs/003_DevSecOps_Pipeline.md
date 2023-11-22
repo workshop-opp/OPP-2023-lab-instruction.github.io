@@ -1,6 +1,6 @@
 ---
 title: "DevSecOps Pipeline"
 draft: false
-weight: 3
+weight: 4
 ---
 

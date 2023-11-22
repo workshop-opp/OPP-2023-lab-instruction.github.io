@@ -1,7 +1,7 @@
 ---
 title: "Resource Diagnosis"
 draft: false
-weight: 0
+weight: 1
 ---
 
 ## Goal:

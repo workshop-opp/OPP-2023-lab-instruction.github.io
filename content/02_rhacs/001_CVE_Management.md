@@ -1,6 +1,6 @@
 ---
 title: "CVE Management"
 draft: false
-weight: 1
+weight: 2
 ---
 

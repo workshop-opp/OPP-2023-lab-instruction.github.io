@@ -1,7 +1,7 @@
 ---
 title: "Interface Walkthrough"
 draft: false
-weight: 0
+weight: 1
 ---
 
 ## Part 1

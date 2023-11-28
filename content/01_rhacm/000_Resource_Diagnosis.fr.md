@@ -1,38 +1,53 @@
 ---
-title: "Resource Diagnosis"
+title: "Observability"
 draft: false
 weight: 1
 ---
 
-## Goal:
-Résolvez l’échec du déploiement causé par les limitations de quotas et déployez avec succès l’application en ajustant les quotas OpenShift.
 
-## Actions:
-Essayez de déployer l'application dans OpenShift.
+## Contexte :
 
-Utiliser
-```coquille
-oc new-app <application_manifest> pour lancer le déploiement.
+Dans notre environnement de cluster de production, nous avons récemment rencontré un problème critique lié à l'allocation excessive de ressources par l'une des équipes. Cela a conduit à un engagement de requêtes CPU dépassant 300%. Cette situation compromet la disponibilité et la stabilité de notre infrastructure, nécessitant une identification rapide du namespace surchargé et la mise en place de mesures de contrôle des quotas pour prévenir de futurs incidents.
+
+## Objectif de l'exercice :
+
+L'objectif de cet exercice est de détecter le namespace et le deployment responsable de l'attribution excessive de cpu request et de le patcher.
+
+## Étapes de l'exercice :
+
+Accédez au cluster de production et recueillez des informations sur l'utilisation des ressources.
+
+Pour cela rendez-vous dans la section Infrastructure et cliquez sur Grafana (en haut a gauche).
+
+![Grafana](/OPP-2023-lab-instruction.github.io/images/grafana-access.png)
+
+Un certain nombre de dashboard sont present par defaut lors de l'installation de l'observability. Pour y acceder cliquer sur Dashboards puis Browse.
+
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/browse-dashboard.png)
+
+## A vous de jouer 
+
+A partir de ces differents dashboard nous vous demandont de retrouver quel est le deployment dont la CPU request a ete surevalue par erreur (100 cpu au lieu de 100 milli-cpu). Lorsque vous aurez trouve le nom du namesapce appliquer lui le patch suivant pour remedier a la surallocation : 
+
+```shell
+oc patch deployment <deployment-name> -p '{"spec":{"template":{"spec":{"containers":[{"name":"<deployment-name>","resources":{"requests":{"cpu":"10m"}}}]}}}}' -n <namespace-name>
 ```
-Cliquez sur le bouton "Déployer" dans la console OpenShift.
-Identifiez les contraintes de ressources dans Grafana de RHACM.
 
-Accédez au tableau de bord Grafana de RHACM.
-Sélectionnez le cluster, accédez à « Observabilité » > « Grafana ».
-Observez les mesures d’utilisation des ressources.
-Confirmez les problèmes de quota affectant le déploiement.
+## Solution
 
-Examinez les métriques Grafana indiquant les contraintes de ressources.
-Ajustez les quotas dans OpenShift.
+{{%expand "Solution" %}}
 
-Localisez « Quotas de ressources » dans la console OpenShift.
-Modifiez le quota spécifique impacté par le problème de déploiement.
-Augmentez les limites de ressources si nécessaire.
-Redéployez l'application.
+Le tableau des quotas CPU est disponible dans le Dashboard General/Kubernetes/Compute Resources/Cluster. Une fois dans ce dashboard selectionnez le Cluster sno-prod. Dans le Tableau Cpu Quota cliquez sur CPU Requests pour les trier dans l'ordres. Vous devriez alors observer que le namespace Mirage dispose d'une request de 100 cpu alors qu'il n'en use que 0.001. C'est donc le namesapce problematique.
 
-Utiliser
-```
-dernier déploiement d'oc <application_deployment>
-```
-pour le redéploiement.
-Surveillez l’état du déploiement pour assurer sa réussite.
+{{% /expand%}}
+
+
+
+
+
+
+
+
+
+
+

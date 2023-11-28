@@ -9,6 +9,6 @@ pre = "<b>1. </b>"
 
 # Presentation
 
-Welcome to this workshop dedicated to optimizing your clusters and enhancing their security through OpenShift Platform Plus. This interactive two-hour session will immerse you in the advanced mechanisms of deployment, resource management, and platform security.
+Bienvenue dans cet atelier dédié à l'optimisation de vos clusters et à l'amélioration de leur sécurité grâce à OpenShift Platform Plus. Cette session interactive de deux heures vous plongera dans les mécanismes avancés de déploiement, de gestion des ressources et de sécurité de la plateforme.
 
 

@@ -6,23 +6,23 @@ weight: 4
 
 ## OpenShift cluster
 
-3 OpenShift clusters are already deployed via **RHPDS** environment and **"AWS Blank Open Environemnt"** service :
+3 clusters OpenShift sont déjà déployés via l'environnement **RHPDS** et le service **"AWS Blank Open Environemnt"** :
 
-* Hub Cluster
-* SNO Dev Cluster
-* SNO Prod Cluster
+* Cluster Hub
+* Cluster de développement SNO
+* Cluster de production SNO
 
-**No action is required on your side.**
+**Aucune action n'est requise de votre part.**
 
-![RHPDS Service](/OPP-2023-lab-instruction.github.io/images/aws-blank-open.png)
+![Service RHPDS](/OPP-2023-lab-instruction.github.io/images/aws-blank-open.png)
 
 
-## OpenShift cluster details
+## Détails du cluster OpenShift
 
-* **OCP Cluster console URL :** `https://TOCOMPLETE/dashboards`
+* **URL de la console du cluster OCP :** `https://TOCOMPLETE/dashboards`
 
-* **OCP Cluster API URL :** `https://TOCOMPLETE:6443`
+* **URL de l'API du cluster OCP :** `https://TOCOMPLETE:6443`
 
-There is a dedicated OpenShift user for each warehouse.
-On your table you will find a poster with the relevant information.  
-To connect to your Openshift cluster, click on the *OCP Cluster console URL* above and fill in your username and password. You will have acces to the *Web Terminal* by clicking on the **>_** icon on the top right. The Web Terminal provides the *oc* client.
+Il existe un utilisateur OpenShift dédié pour chaque entrepôt.
+Sur votre table, vous trouverez une affiche avec les informations pertinentes.
+Pour vous connecter à votre cluster Openshift, cliquez sur *URL de la console OCP Cluster* ci-dessus et renseignez votre nom d'utilisateur et votre mot de passe. Vous aurez accès au *Terminal Web* en cliquant sur l'icône **>_** en haut à droite. Le Terminal Web fournit le client *oc*.

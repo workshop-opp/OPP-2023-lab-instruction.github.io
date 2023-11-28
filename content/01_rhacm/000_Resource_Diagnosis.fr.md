@@ -5,34 +5,34 @@ weight: 1
 ---
 
 ## Goal:
-Resolve deployment failure caused by quota limitations and successfully deploy the application by adjusting OpenShift quotas.
+Résolvez l’échec du déploiement causé par les limitations de quotas et déployez avec succès l’application en ajustant les quotas OpenShift.
 
 ## Actions:
-Attempt to deploy the application in OpenShift.
+Essayez de déployer l'application dans OpenShift.
 
-Use 
-```shell
-oc new-app <application_manifest> to initiate deployment.
+Utiliser
+```coquille
+oc new-app <application_manifest> pour lancer le déploiement.
 ```
-Click on the "Deploy" button in the OpenShift console.
-Identify resource constraints in RHACM's Grafana.
+Cliquez sur le bouton "Déployer" dans la console OpenShift.
+Identifiez les contraintes de ressources dans Grafana de RHACM.
 
-Access RHACM's Grafana dashboard.
-Select the cluster, navigate to "Observability" > "Grafana".
-Observe resource utilization metrics.
-Confirm quota issues impacting deployment.
+Accédez au tableau de bord Grafana de RHACM.
+Sélectionnez le cluster, accédez à « Observabilité » > « Grafana ».
+Observez les mesures d’utilisation des ressources.
+Confirmez les problèmes de quota affectant le déploiement.
 
-Review Grafana metrics indicating resource constraints.
-Adjust quotas in OpenShift.
+Examinez les métriques Grafana indiquant les contraintes de ressources.
+Ajustez les quotas dans OpenShift.
 
-Locate "Resource Quotas" in the OpenShift console.
-Edit the specific quota impacted by the deployment issue.
-Increase resource limits as needed.
-Redeploy the application.
+Localisez « Quotas de ressources » dans la console OpenShift.
+Modifiez le quota spécifique impacté par le problème de déploiement.
+Augmentez les limites de ressources si nécessaire.
+Redéployez l'application.
 
-Use 
+Utiliser
 ```
-oc rollout latest <application_deployment> 
+dernier déploiement d'oc <application_deployment>
 ```
-for redeployment.
-Monitor deployment status for successful completion.
+pour le redéploiement.
+Surveillez l’état du déploiement pour assurer sa réussite.

@@ -6,16 +6,16 @@ draft: false
 
 # Openshift Platform Plus 2023 Lab
 
-Welcome, dear Red Hatter, in this Lab where you will discover a part of the Red Hat Openshift Platform Plus offering.
+Bienvenue, cher Red Hatter, dans ce Lab où vous découvrirez une partie de l'offre Red Hat Openshift Platform Plus.
 
-You will play with the following technologies: 
+Vous jouerez avec les technologies suivantes :
 
 * Openshift
-* Red Hat Advanced Cluster Management (RHACM)
-* Red Hat Advanced Cluster Security (RHACS)
-* Quay 
+* Gestion avancée des clusters Red Hat (RHACM)
+* Sécurité avancée des clusters Red Hat (RHACS)
+* Quai
 
 
-In this lab, you will  TOCOMPLETE
+Dans cet atelier, vous devrez COMPLÉTER
 
-Fun are expected ahead!
+Du plaisir est attendu à venir !

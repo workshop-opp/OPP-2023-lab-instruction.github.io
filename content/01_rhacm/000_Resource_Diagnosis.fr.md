@@ -39,6 +39,17 @@ oc patch deployment <deployment-name> -p '{"spec":{"template":{"spec":{"containe
 
 Le tableau des quotas CPU est disponible dans le Dashboard General/Kubernetes/Compute Resources/Cluster. Une fois dans ce dashboard selectionnez le Cluster sno-prod. Dans le Tableau Cpu Quota cliquez sur CPU Requests pour les trier dans l'ordres. Vous devriez alors observer que le namespace Mirage dispose d'une request de 100 cpu alors qu'il n'en use que 0.001. C'est donc le namesapce problematique.
 
+
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/tableau-cpu.png)
+
+Connectez vous au cluster sno-prod et rendez vous dans le namespace mirage. Cliquez sur Workloads > Pods. On observe que le pods todo-app est au statut Pending car les noeuds de dispose pas d'assez de resources pour repondre a notre request. On observe que le Deployement qui lui est associe est todo-app. Il ne nous reste donc plus qu'a appliquer le patch suivant.
+
+![Request](/OPP-2023-lab-instruction.github.io/images/resource-request.png)
+
+```shell
+oc patch deployment todo-app -p '{"spec":{"template":{"spec":{"containers":[{"name":"todo-app","resources":{"requests":{"cpu":"10m"}}}]}}}}' -n mirage
+```
+
 {{% /expand%}}
 
 

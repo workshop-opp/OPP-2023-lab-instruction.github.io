@@ -11,7 +11,7 @@ Dans notre environnement de cluster de production, nous avons récemment rencont
 
 ## Objectif de l'exercice :
 
-L'objectif de cet exercice est de détecter le namespace responsable de l'attribution excessive de quotas de ressources et de mettre en place des ResourceQuotas pour prévenir de tels dépassements à l'avenir.
+L'objectif de cet exercice est de détecter le namespace et le deployment responsable de l'attribution excessive de cpu request et de le patcher.
 
 ## Étapes de l'exercice :
 
@@ -27,11 +27,17 @@ Un certain nombre de dashboard sont present par defaut lors de l'installation de
 
 ## A vous de jouer 
 
-A partir de ces differents dashboard nous vous demandont de retrouver quelle namespace a un quota CPU surevalue. Lorsque vous aurez trouve le nom du namesapce appliquer lui un resource quota pour empecher la surallocation. En appliquant le manifest suivant :
+A partir de ces differents dashboard nous vous demandont de retrouver quel est le deployment dont la CPU request a ete surevalue par erreur (10 cpu au lieu de 10 milli-cpu). Lorsque vous aurez trouve le nom du namesapce appliquer lui le patch suivant pour remedier a la surallocation : 
 
 ```shell
-oc patch deployment <deployment-name> -p '{"spec":{"template":{"spec":{"containers":[{"name":"<deployment-name>","resources":{"requests":{"cpu":"1"}}}]}}}}' -n <namespace-name>
+oc patch deployment <deployment-name> -p '{"spec":{"template":{"spec":{"containers":[{"name":"<deployment-name>","resources":{"requests":{"cpu":"10m"}}}]}}}}' -n <namespace-name>
 ```
+
+## Solution
+
+
+
+
 
 
 

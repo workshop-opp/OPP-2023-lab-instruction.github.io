@@ -1,0 +1,9 @@
+schemaVersion: 2.1.0
+metadata:
+  name: hugo
+
+commands:
+  - id: install-hugo
+    exec:
+      commandLine: wget -qO- https://github.com/gohugoio/hugo/releases/download/v0.120.4/hugo_0.120.4_Linux-64bit.tar.gz | ( cd $HOME/.local/bin ; tar xvfz - hugo ) 
+      label: Run build of CRDs and schemas

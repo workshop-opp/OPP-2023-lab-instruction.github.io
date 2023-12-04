@@ -20,7 +20,7 @@ Passons à la pratique :
 - Cliquer sur "START"
 - Suivez les étapes d'avancement du pipeline
 
-![Grafana](/OPP-2023-lab-instruction.github.io/images/pipeline_1.png)
+![Pipeline](/OPP-2023-lab-instruction.github.io/images/pipeline_1.png)
 
 
 

@@ -31,7 +31,7 @@ C'est pour cela que le pipeline s'est arrêté et l'application n'est pas déplo
 Allons sur le dashboard de RHACS et plus précisement dans la section Violations.
 
 
-![Grafana](/OPP-2023-lab-instruction.github.io/images/pipeline_2.png)
+![Violations](/OPP-2023-lab-instruction.github.io/images/pipeline_2.png)
 
 A la 1ère ligne, vous pouvez la policy pillow_policy qui a bloqué le déploiement de notre application.
 Vous pouvez cliquer sur la policy pour plus de détail.
@@ -58,7 +58,7 @@ Suivez les étapes :
 - en haut à gauche, cliquez sur Actions, puis edit policy.
 - Allez directement à section 2 : Policy Behavior
 
-![Grafana](/OPP-2023-lab-instruction.github.io/images/pipeline_3.png)
+![policy](/OPP-2023-lab-instruction.github.io/images/pipeline_3.png)
 
 Dans la section "Response method" comme ci dessus, "inform and enforce" est coché.
 

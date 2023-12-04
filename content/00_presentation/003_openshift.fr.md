@@ -19,9 +19,9 @@ weight: 4
 
 ## Détails du cluster OpenShift
 
-* **URL de la console du cluster OCP :** `https://TOCOMPLETE/dashboards`
+* **URL de la console du cluster OCP :** `https://console-openshift-console.apps.workshop-opp.sandbox2156.opentlc.com/`
 
-* **URL de l'API du cluster OCP :** `https://TOCOMPLETE:6443`
+* **URL de l'API du cluster OCP :** `https://api.workshop-opp.sandbox2156.opentlc.com:6443`
 
 Il existe un utilisateur OpenShift dédié pour chaque entrepôt.
 Sur votre table, vous trouverez une affiche avec les informations pertinentes.

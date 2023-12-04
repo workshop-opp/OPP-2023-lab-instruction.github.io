@@ -5,10 +5,10 @@ draft: false
 weight: 1
 ---
 
-Votre objectif sera de faciliter l'évolutivité et la sécurité de vos clusters OpenShift avec OpenShift Platform Plus grâce à une exploration immersive.
+Your goal will be to Facilitate Scale and Security for Your OpenShift Clusters with OpenShift Platform Plus through immersive exploration. 
 
-Plongez dans Advanced Cluster Management (ACM), où vous diagnostiquerez les contraintes de ressources, affinerez les règles de placement pour le déploiement multi-cloud et plongerez dans le monde de GitOps, en automatisant les déploiements pour résoudre de manière proactive les problèmes similaires à de véritables scénarios de résolution d'incidents.
+Dive into Advanced Cluster Management (ACM), where you'll diagnose resource constraints, refine placement rules for multi-cloud deployment, and delve into the world of GitOps, automating deployments to proactively address issues akin to real incident resolution scenarios.
 
-Dans le segment suivant Advanced Cluster Security (ACS), votre objectif sera de relever les défis de sécurité. Vous naviguerez dans les interfaces pour gérer les CVE, élaborer des politiques de sécurité réactives et détecter les flux d'attaques. Participez pleinement à un processus DevSecOps, en identifiant, résolvant et affinant les méthodologies de déploiement, garantissant ainsi une robustesse accrue de vos applications.
+In the subsequent Advanced Cluster Security (ACS) segment, your aim will pivot towards conquering security challenges. You'll navigate interfaces to manage CVEs, craft responsive security policies, and detect attack flows. Engage fully in a DevSecOps process, identifying, resolving, and refining deployment methodologies, ensuring heightened robustness for your applications.
 
 ![OPP global](/OPP-2023-lab-instruction.github.io/images/Openshift_platform_plus.png)

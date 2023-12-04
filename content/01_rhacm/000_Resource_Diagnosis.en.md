@@ -5,7 +5,7 @@ weight: 1
 ---
 
 
-##Context :
+## Context :
 
 In our production cluster environment, we recently encountered a critical issue related to over-allocation of resources by one of the teams. This led to over 300% CPU request engagement. This situation compromises the availability and stability of our infrastructure, requiring rapid identification of overloaded namespaces and implementation of quota control measures to prevent future incidents.
 

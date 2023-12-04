@@ -13,14 +13,14 @@ pre = "<b>2. </b>"
 
 In prerequisites to this course, aws credentials have been created from access key and secret key.
 
-* From the navigation menu, navigate to Automate infrastructure > Clusters.
+- From the navigation menu, navigate to Automate infrastructure > Clusters.
 
 
-* On the Clusters page, Click Create Cluster. And Select Amazon Web Services. Select Standalone.
+- On the Clusters page, Click Create Cluster. And Select Amazon Web Services. Select Standalone.
 
 ![RHACM Infrastructure](/OPP-2023-lab-instruction.github.io/images/rhacm-infrastructure.png)
 
-* We will now complete the form to Create Cluster with the below details 
+- We will now complete the form to Create Cluster with the below details 
 
 | Parameters | Value |
 |----------|----------|
@@ -43,11 +43,11 @@ Then Update master replicas from 3 to 1 and worker replicas from 3 to 0.
 
 You should now have the below install config.yaml.
 
-* Now click Next, until the review, and Finally Click on Create.
+- Now click Next, until the review, and Finally Click on Create.
 
-* You can now follow the process of the cluster Creation in the RHACM UI with Cluster Install logs. 
+- You can now follow the process of the cluster Creation in the RHACM UI with Cluster Install logs. 
 
 ![[Installation Process]](/OPP-2023-lab-instruction.github.io/images/creating-cluster-sno-demo.png)
 
-* At the end you should see Your newly create cluster in the Ready States in the UI.
+- At the end you should see Your newly create cluster in the Ready States in the UI.
 

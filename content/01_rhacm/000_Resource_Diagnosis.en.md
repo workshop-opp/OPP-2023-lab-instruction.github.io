@@ -1,42 +1,64 @@
 ---
-title: “Observability”
+title: "Observability"
 draft: false
 weight: 1
 ---
 
 
-## Context :
+## Contexte :
 
-In our production cluster environment, we recently encountered a critical issue related to over-allocation of resources by one of the teams. This led to over 300% CPU request engagement. This situation compromises the availability and stability of our infrastructure, requiring rapid identification of overloaded namespaces and implementation of quota control measures to prevent future incidents.
+Dans notre environnement de cluster de production, nous avons récemment rencontré un problème critique lié à l'allocation excessive de ressources par l'une des équipes. Cela a conduit à un engagement de requêtes CPU dépassant 300%. Cette situation compromet la disponibilité et la stabilité de notre infrastructure, nécessitant une identification rapide du namespace surchargé et la mise en place de mesures de contrôle des quotas pour prévenir de futurs incidents.
 
-## Objective of the exercise:
+## Objectif de l'exercice :
 
-The goal of this exercise is to detect the namespace and deployment responsible for the CPU request overallocation and fix it.
+L'objectif de cet exercice est de détecter le namespace et le deployment responsable de l'attribution excessive de cpu request et de le patcher.
 
-## Exercise steps:
+## Étapes de l'exercice :
 
-Access the production cluster and collect information about resource usage.
+Accédez au cluster de production et recueillez des informations sur l'utilisation des ressources.
 
-To do this, go to the Infrastructure section and click on Grafana (top left).
+Pour cela rendez-vous dans la section Infrastructure et cliquez sur Grafana (en haut a gauche).
 
 ![Grafana](/OPP-2023-lab-instruction.github.io/images/grafana-access.png)
 
-A number of dashboards are present by default when installing observability. To access it, click on Dashboards then Browse.
+Un certain nombre de dashboard sont present par defaut lors de l'installation de l'observability. Pour y acceder cliquer sur Dashboards puis Browse.
 
 ![Dashboard](/OPP-2023-lab-instruction.github.io/images/browse-dashboard.png)
 
-## Up to you
+## A vous de jouer 
 
-From these different dashboards, we ask you to find which deployment has the CPU demand overestimated by mistake (100 cpu instead of 100 milli-cpu). When you find the nameapce, apply the following patch to it to address overuse:
+A partir de ces differents dashboard nous vous demandont de retrouver quel est le deployment dont la CPU request a ete surevalue par erreur (100 cpu au lieu de 100 milli-cpu). Lorsque vous aurez trouve le nom du namesapce appliquer lui le patch suivant pour remedier a la surallocation : 
 
 ```shell
-Patch deployment oc <deployment-name> -p '{"spec":{"template":{"spec":{"containers":[{"name":"<deployment-name>","resources": { "requests":{"cpu":"10m"}}}]}}}}' -n <namespace name>
+oc patch deployment <deployment-name> -p '{"spec":{"template":{"spec":{"containers":[{"name":"<deployment-name>","resources":{"requests":{"cpu":"10m"}}}]}}}}' -n <namespace-name>
 ```
 
 ## Solution
 
 {{%expand "Solution" %}}
 
-The CPU quota table is available in the General/Kubernetes/Compute Resources/Cluster dashboard. Once in this dashboard, select the sno-prod cluster. In the CPU quota table, click CPU Requests to sort them in order. You should then observe that the Mirage namespace has a request of 100 cpu while it only uses 0.001. So that's the namespace problem.
+Le tableau des quotas CPU est disponible dans le Dashboard General/Kubernetes/Compute Resources/Cluster. Une fois dans ce dashboard selectionnez le Cluster sno-prod. Dans le Tableau Cpu Quota cliquez sur CPU Requests pour les trier dans l'ordres. Vous devriez alors observer que le namespace Mirage dispose d'une request de 100 cpu alors qu'il n'en use que 0.001. C'est donc le namesapce problematique.
 
-{{% /develop%}}
+
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/tableau-cpu.png)
+
+Connectez vous au cluster sno-prod et rendez vous dans le namespace mirage. Cliquez sur Workloads > Pods. On observe que le pods todo-app est au statut Pending car les noeuds de dispose pas d'assez de resources pour repondre a notre request. On observe que le Deployement qui lui est associe est todo-app. Il ne nous reste donc plus qu'a appliquer le patch suivant.
+
+![Request](/OPP-2023-lab-instruction.github.io/images/resource-request.png)
+
+```shell
+oc patch deployment todo-app -p '{"spec":{"template":{"spec":{"containers":[{"name":"todo-app","resources":{"requests":{"cpu":"10m"}}}]}}}}' -n mirage
+```
+
+{{% /expand%}}
+
+
+
+
+
+
+
+
+
+
+

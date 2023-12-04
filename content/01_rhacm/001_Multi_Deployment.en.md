@@ -51,7 +51,7 @@ Then go to the **Applications** section
 2 - __Deployment on the Dev and Prod cluster simultaneously__
 - Return to your application **<YOUR_USER>-airports-frontend**
 - Edit there
-- Create a new placement rule using a label **common** to the 2 clusters
+- Create a new placement rule using a common label to the 2 clusters
 - Observe and verify that your application is deployed on the 2 clusters
 
 ## Solution

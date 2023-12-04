@@ -57,7 +57,7 @@ Violations record all of the specific times where a policy criteria has been met
 Think of it as the “stream” of events that have occurred, although we don’t want this to just be a “to-do” list for incident response folks.
 
 
-![Grafana](/OPP-2023-lab-instruction.github.io/images/violation1.png)
+![Grafana](/OPP-2023-lab-instruction.github.io/images/violations1.png)
 
 Click on any violation, the violation details appear.
 

@@ -1,6 +1,6 @@
 ---
 title: "Application Deployment and  Management"
-draft: false
+draft: true
 weight: 2
 ---
 

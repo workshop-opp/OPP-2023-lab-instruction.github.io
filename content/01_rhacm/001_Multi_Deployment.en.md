@@ -1,8 +1,10 @@
 ---
-title: "Application Deployment"
+title: "Application Deployment and  Management"
 draft: false
-weight: 3
+weight: 2
 ---
+
+
 
 ## Goal:
 Deploy an application using Red Hat ACM application deployment.

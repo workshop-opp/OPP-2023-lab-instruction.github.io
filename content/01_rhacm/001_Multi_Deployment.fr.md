@@ -26,7 +26,7 @@ Pour cela, en haut de l'écran, cliquer sur **local-cluster** puis **All Cluster
 
 Aller ensuite dans la partie **Applications** 
 
-![ACM Applications](/OPP-2023-lab-instruction.github.io/images/acm-aaplications.png)
+![ACM Applications](/OPP-2023-lab-instruction.github.io/images/acm-applications.png)
 
 
 ## A vous de jouer 
@@ -67,3 +67,6 @@ Aller ensuite dans la partie **Applications**
 
 Nous allons observer les mécanismes GitOps offerts par ACM : pour ce faire, il vous faudra **OBLIGATOIREMENT** un compte GitHub.
 - Connecter vous avec votre login personnel à [GitHub](https://github.com)
+- Effectuez un fork du repository https://github.com/workshop-opp/airports-frontend
+- Modifier l'application **<VOTRE_USER>-airports-frontend** pour utiliser le repository que vous venez de forker (https://github.com/<VOTRE_USER_GITHUB/airports-frontend)
+- Modifier le nombre de replicas dans le fichier `k8s/deployment.yaml` sur le repository de VOTRE compte

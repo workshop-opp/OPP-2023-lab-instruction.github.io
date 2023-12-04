@@ -37,7 +37,7 @@ OrgTechName:   Amazon EC2 Network Operations
 Votre mission, si vous l'acceptez, est d'investiguer l'environnement du Lab à la recherche du chemin parcouru par l'attaquant pour perpétrer cette exfiltration de données.
 L'objectif est atteint quand vous trouvez l'URL du **Request Bin** utilisé par l'attaquant pour exfiltrer la clé d'API.
 
-![Request Bin montrant la clé d'API AWS exfiltrée](/images/Attack-Flow-Analysis-Request-Bin.png)
+![Request Bin montrant la clé d'API AWS exfiltrée](/OPP-2023-lab-instruction.github.io//images/Attack-Flow-Analysis-Request-Bin.png)
 
 À vous de jouer !
 
@@ -51,7 +51,7 @@ Indices :
 
 Naviguez dans la section **Violations** et filtrez la vue avec `deployment:visa-processor namespace:data-theft`.
 
-![visa-processor violations](/images/Attack-Flow-Analysis-visa-processor-violations.png)
+![visa-processor violations](/OPP-2023-lab-instruction.github.io//images/Attack-Flow-Analysis-visa-processor-violations.png)
 
 On note bien la présence de CVE mais rien de très suspicieux.
 
@@ -59,26 +59,26 @@ Basculez sur la section **Network Graph** et affichez les flux du cluster **loca
 
 Cliquez sur le déploiement **back-office**.
 
-![back-office network graph](/images/Attack-Flow-Analysis-back-office-network-graph.png)
+![back-office network graph](/OPP-2023-lab-instruction.github.io//images/Attack-Flow-Analysis-back-office-network-graph.png)
 
 Les flux observés semblent légitimes.
 
 Cliquez sur le déploiement **information-service**.
 
-![information-service network graph](/images/Attack-Flow-Analysis-information-service-network-graph.png)
+![information-service network graph](/OPP-2023-lab-instruction.github.io//images/Attack-Flow-Analysis-information-service-network-graph.png)
 
 Observez le flux entrant depuis le router OpenShift et le flux sortant vers AWS.
 Notez également que le déploiement **information-service** communique avec le déploiement **visa-processor**.
 
 Naviguez dans la section **Violations** et filtrez la vue avec `deployment:information-service namespace:data-theft`.
 
-![information-services violations](/images/Attack-Flow-Analysis-information-service-violations.png)
+![information-services violations](/OPP-2023-lab-instruction.github.io//images/Attack-Flow-Analysis-information-service-violations.png)
 
 Notez la présence de la vulnérabilité **Log4Shell** ainsi que d'un comportement suspect au runtime: **Shell Spawned by Java Application**.
 
 Cliquez sur la violation **Shell spawned by Java Application**.
 
-![information-services violation Shell Spawned by Java Application](/images/Attack-Flow-Analysis-information-service-violation-shell-spawned.png)
+![information-services violation Shell Spawned by Java Application](/OPP-2023-lab-instruction.github.io//images/Attack-Flow-Analysis-information-service-violation-shell-spawned.png)
 
 Observez la commande exécutée :
 

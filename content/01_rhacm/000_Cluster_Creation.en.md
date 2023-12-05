@@ -1,10 +1,9 @@
 ---
-title: "Observability"
+title: "Cluster creation"
 draft: false
 weight: 1
 ---
 
-## Summary
 
 ## Cluster Creation (make by the instructor)
 

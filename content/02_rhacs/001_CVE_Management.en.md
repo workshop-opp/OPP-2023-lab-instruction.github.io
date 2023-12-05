@@ -4,15 +4,15 @@ draft: false
 weight: 2
 ---
 
-## Context :
+## Context
 
 The IT Security team received an alert regarding a new critical vulnerability (CVE) that could have a significant impact on systems. This CVE affects several applications. To avoid potential exploitation of this vulnerability, it is crucial to detect and prevent any new application deployments that may contain it.
 
-## Objective of the exercise:
+## Objective of the exercise
 
 The main objective is to implement a security policy that blocks any application deployment containing the identified CVE on the affected cluster. This policy must be automated to prevent any risk of unintentional deployment of a vulnerable application.
 
-## Exercise Steps:
+## Exercise Steps 
 
 Access the RHACS interface and go to the Vulnerability Management section. This interface gives you visibility on all images belonging to your scope.
 

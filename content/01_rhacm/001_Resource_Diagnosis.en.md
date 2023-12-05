@@ -5,15 +5,15 @@ weight: 2
 ---
 
 
-## Contexte :
+## Contexte 
 
 In our production cluster environment, we recently encountered a critical issue related to over-allocation of resources by one of the teams. This led to CPU request engagement exceeding 300%. This situation compromises the availability and stability of our infrastructure, requiring rapid identification of overloaded namespace and implementation of quota control measures to prevent future incidents.
 
-## Goal :
+## Goal 
 
 The objective of this exercise is to detect the namespace and deployment responsible for the excessive cpu request allocation and to patch it.
 
-## Actions :
+## Actions 
 
 Access the production cluster and collect information about resource usage.
 

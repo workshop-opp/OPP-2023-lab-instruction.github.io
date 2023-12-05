@@ -5,15 +5,15 @@ weight: 2
 ---
 
 
-## Contexte :
+## Contexte 
 
 Dans notre environnement de cluster de production, nous avons récemment rencontré un problème critique lié à l'allocation excessive de ressources par l'une des équipes. Cela a conduit à un engagement de requêtes CPU dépassant 300%. Cette situation compromet la disponibilité et la stabilité de notre infrastructure, nécessitant une identification rapide du namespace surchargé et la mise en place de mesures de contrôle des quotas pour prévenir de futurs incidents.
 
-## Objectif de l'exercice :
+## Objectif de l'exercice 
 
 L'objectif de cet exercice est de détecter le namespace et le deployment responsable de l'attribution excessive de cpu request et de le patcher.
 
-## Étapes de l'exercice :
+## Étapes de l'exercice 
 
 Accédez au cluster de production et recueillez des informations sur l'utilisation des ressources.
 

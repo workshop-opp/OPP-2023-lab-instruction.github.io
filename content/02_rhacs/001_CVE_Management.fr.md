@@ -16,13 +16,16 @@ L'objectif principal est de mettre en place une politique de sécurité qui bloq
 
 Acceder a l'interface RHACS et rendez vous dans la section Vulnerability Management. Cette interface vous donne une visibilite sur l'ensemble des images appartenant a votre scope.
 
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/dashboard-vulnerability-management.png)
+
+
 ## A vous de jouer 
 
 A partir de ces différents dashboard de bord nous vous demandons de retrouver et d'exporter tous les déploiements concernés par les CVE au format PDF.
 
 Une fois cette étape terminée. Accédez à Configuration de la plateforme > Gestion des stratégies et cliquez sur Créer une policy. Vous remplirez le formulaire afin que toutes les images portant le CVE `CVE-2022-32207` soient bloquées lors des Stage Build and Deploy avec une méthode `Inform and Enforce`.
 
-La Policy devra repondre au critere suivant :
+La policy doit répondre au critère suivant :
 
 | Parameters | Value |
 |----------|----------|
@@ -53,8 +56,15 @@ Vous verrez alors apparaître tous les déploiements concernés par notre vulné
 
 {{%expand "Solution: Creation de la Policy" %}}
 
-TODO: ADD manifest to validate
-TODO: ajouter les screen
+![Policy-1](/OPP-2023-lab-instruction.github.io/images/create-policy-step-1.png)
+
+![Policy-2](/OPP-2023-lab-instruction.github.io/images/create-policy-step-2.png)
+
+![Policy-3](/OPP-2023-lab-instruction.github.io/images/create-policy-step-3.png)
+
+![Policy-4](/OPP-2023-lab-instruction.github.io/images/create-policy-step-4.png)
+
+TODO: Add manifest to validate
 
 {{% /expand%}}
 

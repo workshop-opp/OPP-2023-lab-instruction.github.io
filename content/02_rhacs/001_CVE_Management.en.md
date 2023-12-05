@@ -16,11 +16,25 @@ The main objective is to implement a security policy that blocks any application
 
 Access the RHACS interface and go to the Vulnerability Management section. This interface gives you visibility on all images belonging to your scope.
 
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/dashboard-vulnerability-management.png)
+
 ## Up to you
 
 From these different dashboards we ask you to find and export all the deployments affected by the CVE in PDF format.
 
 Once this step is completed. Go to Platform Configuration > Policy Management and click Create Policy. You fill out the form so that all images with the CVE `CVE-2022-32207` are blocked during Stage Build and Deploy with an Inform and Enforce response method.
+
+The policy must meet the following criterion:
+
+| Parameters | Value |
+|----------|----------|
+| Name | policy-<YOURCOUNTRY> |
+| Categories | Vulnerability Management |
+| Lifecycle stages| Build and Deploy |
+| Response method | Inform and enforce |
+| Restrict-by-scope | <YOURCOUNTRY>-ns |
+| Cluster | local-cluster |
+|----------|----------|
 
 ## Solution
 
@@ -41,6 +55,8 @@ You will then see all the deployments affected by our vulnerability appear. Then
 {{% /expand%}}
 
 {{%expand "Solution: Creating the policy" %}}
+
+![Policy-1](/OPP-2023-lab-instruction.github.io/images/create-policy-step-1.png)
 
 {{% /expand%}}
 

@@ -30,7 +30,8 @@ Pour parvenir à l'objectif de l'activité, vous devez :
 
 ## A vous de jouer
 
-{{%expand "Solution:" %}}
+{{%expand "Solution: Exporter la liste des Deployment touche par la CVE `CVE-2022-32207` " %}}
+
 
 
 Dans Openshift Pipelines :

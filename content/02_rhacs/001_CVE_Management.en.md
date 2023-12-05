@@ -58,6 +58,12 @@ You will then see all the deployments affected by our vulnerability appear. Then
 
 ![Policy-1](/OPP-2023-lab-instruction.github.io/images/create-policy-step-1.png)
 
+![Policy-2](/OPP-2023-lab-instruction.github.io/images/create-policy-step-2.png)
+
+![Policy-3](/OPP-2023-lab-instruction.github.io/images/create-policy-step-3.png)
+
+![Policy-4](/OPP-2023-lab-instruction.github.io/images/create-policy-step-4.png)
+
 {{% /expand%}}
 
 

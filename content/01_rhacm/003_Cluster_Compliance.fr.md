@@ -75,7 +75,7 @@ Go In Policy sets section and click on Create Policy set. Put policyset-<YOURCOU
 
 Check the policy-checkclusteroperator and your newly created policy.
 
-![Policy](/OPP-2023-lab-instruction.github.io/images/policy_management.png)
+![Policy](/OPP-2023-lab-instruction.github.io/images/create-policyset.png)
 
 In the placement Section, select `dev` and `prod`.
 

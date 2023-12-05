@@ -18,22 +18,43 @@ Acceder a l'interface RHACS et rendez vous dans la section Vulnerability Managem
 
 ## A vous de jouer 
 
-A partir de ces differents dashboard nous vous demandons de retrouver et d'exporter toutes les deployment affecte par la CVE sous le format PDF. 
+A partir de ces différents dashboard de bord nous vous demandons de retrouver et d'exporter tous les déploiements concernés par les CVE au format PDF.
 
-Une fois cette etape realiser. Rendez vous dans Platform Configuration > Policy Management et cliquez sur Create Policy. Vous completerez le formulaire de sorte que toutes les images portant la CVE `CVE X` soit bloque au Stage Build et Deploy avec une methode de reponse de type Inform and Enforce.
+Une fois cette étape terminée. Accédez à Configuration de la plateforme > Gestion des stratégies et cliquez sur Créer une policy. Vous remplirez le formulaire afin que toutes les images portant le CVE `CVE-2022-32207` soient bloquées lors des Stage Build and Deploy avec une méthode `Inform and Enforce`.
+
+La Policy devra repondre au critere suivant :
+
+| Parameters | Value |
+|----------|----------|
+| Name | policy-<YOURCOUNTRY> |
+| Categories | Vulnerability Management |
+| Lifecycle stages| Build and Deploy |
+| Response method | Inform and enforce |
+| Restrict-by-scope | <YOURCOUNTRY>-ns |
+| Cluster | local-cluster |
+|----------|----------|
 
 ## Solution
 
 
-{{%expand "Solution: Exporter la liste des Deployment touche par la CVE CVE-X" %}}
+{{%expand "Solution: Exporter la liste des Deployment touche par la CVE `CVE-2022-32207` " %}}
 
-Cliquez sur Application & Infrastructure puis cliquez sur Deployment. Dans la barre de filtre ecrivez CVE puis le numero de notre CVE
+Cliquez sur Application et infrastructure, puis sur Deployment. 
 
-Vous verrez alors apparaitre tout les deployment concerner par notre vulnerabilite. Cliquez alors sur Export en haut a gauche pour exporter un PDF contenant l'ensemble des informations.
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/dashboard.png)
+
+Dans la barre de filtre écrivez CVE puis le numéro de la CVE.
+
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/peloton.png)
+
+Vous verrez alors apparaître tous les déploiements concernés par notre vulnérabilité. Cliquez ensuite sur Exporter en haut à droite pour exporter un PDF contenant toutes les informations.
 
 {{% /expand%}}
 
 {{%expand "Solution: Creation de la Policy" %}}
+
+TODO: ADD manifest to validate
+TODO: ajouter les screen
 
 {{% /expand%}}
 

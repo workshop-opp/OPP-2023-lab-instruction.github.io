@@ -20,14 +20,21 @@ Access the RHACS interface and go to the Vulnerability Management section. This 
 
 From these different dashboards we ask you to find and export all the deployments affected by the CVE in PDF format.
 
-Once this step is completed. Go to Platform Configuration > Policy Management and click Create Policy. You fill out the form so that all images with the CVE `CVE X` are blocked during Stage Build and Deploy with an Inform and Enforce response method.
+Once this step is completed. Go to Platform Configuration > Policy Management and click Create Policy. You fill out the form so that all images with the CVE `CVE-2022-32207` are blocked during Stage Build and Deploy with an Inform and Enforce response method.
 
 ## Solution
 
 
-{{%expand "Solution: Export the list of deployments affected by CVE CVE-X" %}}
+{{%expand "Solution: Export the list of deployments affected by CVE `CVE-2022-32207` " %}}
 
-Click Application and Infrastructure, then Deployment. In the filter bar write CVE then the number of our CVE
+Click Application and Infrastructure, then Deployment. 
+
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/dashboard.png)
+
+In the filter bar write CVE then the number of our CVE.
+
+
+![Dashboard](/OPP-2023-lab-instruction.github.io/images/peloton.png)
 
 You will then see all the deployments affected by our vulnerability appear. Then click Export at the top left to export a PDF containing all the information.
 

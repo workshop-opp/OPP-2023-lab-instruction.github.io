@@ -14,7 +14,7 @@ L'objectif principal est de mettre en place une politique de sécurité qui bloq
 
 ## Étapes de l’exercice
 
-Acceder a l'interface RHACS et rendez vous dans la section Vulnerability Management. Cette interface vous donne une visibilite sur l'ensemble des images appartenant a votre scope.
+Acceder à l'interface RHACS et rendez vous dans la section Vulnerability Management. Cette interface vous donne une visibilite sur l'ensemble des images appartenant à votre scope.
 
 ![Dashboard](/OPP-2023-lab-instruction.github.io/images/dashboard-vulnerability-management.png)
 

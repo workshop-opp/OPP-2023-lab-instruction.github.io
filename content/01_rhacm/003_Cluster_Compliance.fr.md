@@ -4,29 +4,29 @@ draft: false
 weight: 4
 ---
 
-## Contexte
+## Context
 
-Suite au déploiement de nos clusters OpenShift, il nous a été demandé de mettre en place des règles de gouvernance pour assurer le bon fonctionnement des environnements. Parmi ces règles, deux politiques spécifiques ont été définies : la politique de supervision **policy-checkclusteroperator** visant à garantir que tous les opérateurs de clusters sont en statut "ready", et la politique **policy-resourcequota-<VOTRE_VILLE>** visant à limiter le nombre de pods déployé dans le namespace **<VOTRE_VILLE>-ns** à 10.
+Following the deployment of our OpenShift clusters, we were asked to implement governance rules to ensure the proper functioning of the environments. Among these rules, two specific policies have been defined: the supervision policy **policy-checkclusteroperator** aimed at guaranteeing that all cluster operators are in "ready" status, and the policy **policy-resourcequota-<YOUR_CITY> ** aimed at limiting the number of pods deployed in the namespace **<YOUR_CITY>-ns** to 10.
 
-## Objectif de l'exercice
+## Objective of the exercise
 
-L'objectif de cet exercice est de créer la politique **policy-resourcequota-<VOTRE_VILLE>** pour restreindre le nombre de pods dans le namespace spécifié. Ensuite, nous devrons appliquer les 2 politiques (resourcequota and checkclusteroperator) aux clusters « sno-dev » et « sno-prod » en utilisant un « Policysets ».
+The objective of this exercise is to create the policy **policy-resourcequota-<YOUR_CITY>** to restrict the number of pods in the specified namespace. Then, we will have to apply the 2 policies (resourcequota and checkclusteroperator) to the “sno-dev” and “sno-prod” clusters using a “Policysets”.
 
 {{% notice note %}}
-La Policy **policy-checkclusteroperator** existe déjà et n’a donc pas besoin d’être recréée.
+The Policy **policy-checkclusteroperator** already exists and therefore does not need to be recreated.
 {{% /notice %}}
 
 
-## Étapes de l'exercice
+## Exercise steps
 
-Accédez à la section gouvernance de RHACM puis cliquez sur Policies. Cliquez ensuite sur Créer une politique.
+Access the governance section of RHACM then click on Policies. Then click Create Policy.
 
 ![Governance](/OPP-2023-lab-instruction.github.io/images/governance.png)
 
-Sélectionnez le toggle pour activer la vue Yaml. Copiez le yaml ci-dessous :
+Select the toggle to activate the Yaml view. Copy the yaml below:
 
 {{% notice info %}}
-N'oubliez pas de mettre à jour **<VOTRE_VILLE>** dans le manifeste ci-dessous avant de l'appliquer.
+Don't forget to update **<YOUR_CITY>** in the manifest below before applying it.
 {{% /notice %}}
 
 
@@ -34,76 +34,76 @@ N'oubliez pas de mettre à jour **<VOTRE_VILLE>** dans le manifeste ci-dessous a
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: policy-resourcequota-<VOTRE_VILLE>
-  namespace: policy-management
-  annotations:
-    policy.open-cluster-management.io/categories: SC System and Communications Protection
-    policy.open-cluster-management.io/controls: SC-6 Resource Availability
-    policy.open-cluster-management.io/standards: NIST SP 800-53
+   name: policy-resourcequota-<YOUR_CITY>
+   namespace: policy-management
+   notes:
+     policy.open-cluster-management.io/categories: SC System and Communications Protection
+     policy.open-cluster-management.io/controls: SC-6 Resource Availability
+     policy.open-cluster-management.io/standards: NIST SP 800-53
 spec:
-  disabled: false
-  policy-templates:
-    - objectDefinition:
-        apiVersion: policy.open-cluster-management.io/v1
-        kind: ConfigurationPolicy
-        metadata:
-          name: policy-resourcequota-example
-        spec:
-          namespaceSelector:
-            include:
-              - <VOTRE_VILLE>-ns
-          object-templates:
-            - complianceType: musthave
-              objectDefinition:
-                apiVersion: v1
-                kind: ResourceQuota
-                metadata:
-                  name: example-resource-quota
-                spec:
-                  hard:
-                    pods: "10"
-          remediationAction: inform
-          severity: medium
-  remediationAction: enforce
+   disabled: false
+   policy-templates:
+     - objectDefinition:
+         apiVersion: policy.open-cluster-management.io/v1
+         kind:ConfigurationPolicy
+         metadata:
+           name: policy-resourcequota-example
+         spec:
+           namespaceSelector:
+             include:
+               - <YOUR_CITY>-ns
+           object-templates:
+             - complianceType: musthave
+               objectDefinition:
+                 api Version: v1
+                 kind:ResourceQuota
+                 metadata:
+                   name: example-resource-quota
+                 spec:
+                   hard:
+                     pods: "10"
+           remediationAction: inform
+           severity: medium
+   remediationAction: enforce
 ```
 
-Cela remplit automatiquement le formulaire. Après avoir compris le fonctionnement de la stratégie, cliquez sur Suivant puis sur Soumettre pour créer la stratégie.
+This automatically fills out the form. After you understand how the policy works, click Next and then Submit to create the policy.
 
 ![Policy](/OPP-2023-lab-instruction.github.io/images/policy-yaml.png)
 
 
 
-## A vous de jouer 
+## Up to you
 
-À partir de votre nouvelle policy et de la policy policy-checkclusteroperator, créez un nouveau PolicySet **policyset-<VOTRE_VILLE>** qui vous permettra d'appliquer vos politiques au cluster sno-prod et sno-dev. 
+From your new policy and the policy policy-checkclusteroperator, create a new PolicySet **policyset-<YOUR_CITY>** which will allow you to apply your policies to the sno-prod and sno-dev cluster.
 
 {{% notice tip %}}
-Vous utiliserez le namespace de policy-management lorsqu’on vous demandera un namespace.
+You will use the policy-management namespace when asked for a namespace.
 {{% /notice %}}
 
 
 ## Solution
 
-{{%expand "Solution guidée" %}}
+{{%expand "Guided solution" %}}
 
-Allez dans la section PolicySet et cliquez sur Créer un policySet. Mettez **policyset-<VOTRE_VILLE>** comme nom et policy-management comme namespace.
+Go to the PolicySet section and click Create policySet. Put **policyset-<YOUR_CITY>** as name and policy-management as namespace.
 
-Check  Policy-checkclusteroperator et votre Policy nouvellement créée.
+Check Policy-checkclusteroperator and your newly created Policy.
 
 ![Policy](/OPP-2023-lab-instruction.github.io/images/create-policyset.png)
 
-Dans la partie placement Section, select `dev` and `prod`.
+In the Placement Section, select `dev` and `prod`.
 
 ![Policy](/OPP-2023-lab-instruction.github.io/images/placement.png)
 
-Cliquez sur Submit.
+Click Submit.
 
-Vous pourrez alors observer le policy report de votre policyset.
+You will then be able to observe the policy report of your policyset.
 
 ![Policy](/OPP-2023-lab-instruction.github.io/images/policy-report.png)
 
 {{% notice tip %}}
-Pour valider, vous pouvez essayer de scale un déploiement jusqu'à 12 dans le namesapce **<VOTRE_VILLE>-ns** de l'un des clusters gérés pour vérifier l'effet des resourcesQuotas.
+To validate, you can try scaling a deployment up to 12 in the namesapce **<YOUR_CITY>-ns** of one of the managed clusters to check the effect of resourcesQuotas.
 {{% /notice %}}
 
 

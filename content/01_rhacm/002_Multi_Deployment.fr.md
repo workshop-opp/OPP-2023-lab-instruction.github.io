@@ -33,24 +33,52 @@ Aller ensuite dans la partie **Applications**
 
 1 - __Déploiement sur le cluster de développement__
 - Créer une application de type **Subscription**
-- Son nom sera **<VOTRE_USER>-airports-frontend**
-- Son namespace sera **<VOTRE_USER>-airports-frontend**
+- Son nom sera **<VOTRE_VILLE>-airports-frontend**
+- Son namespace sera **<VOTRE_VILLE>-ns**
 - Repository **Git** basé sur [airports-frontend](https://github.com/workshop-opp/airports-frontend.git)
 - Branch : **main**
 - Path : **k8s**
-- Déployer l'application sur le Cluster sets **default** et choisissez 1 label identifiant UNIQUEMENT notre cluster de développement (astuce : vous pouvez trouver l'ensemble des labels de chaque cluster dans le menu Infrastructure)
+- Déployer l'application sur le Cluster sets **global** et choisissez 1 label identifiant UNIQUEMENT notre cluster de développement 
+
+{{% notice tip %}}
+Astuce : vous pouvez trouver l'ensemble des labels de chaque cluster dans le menu Infrastructure
+{{% /notice %}}
+
 - Vérifier dans l'onglet **Topology** que l'application s'est bien déplpoyée sur le bon cluster (vous pouvez également vous connecter à la console OpenShift du cluster de Dev et vérifier que le nouveau namespace contient votre application )
 
 ## Solution
 
 {{%expand "Solution guidée" %}}
 
+Remplissez le formulaire comme indiqué ci-dessous (en remplaçant `tokyo` par le nom de votre ville).
+
+![ACM Applications step 1](/OPP-2023-lab-instruction.github.io/images/create-application-step-1.png)
+
+Dans l'onglet Infrastructure, vous avez probablement remarqué qu'un label `environment=dev` a été appliquée au cluster de développement. C'est celui que nous allons utiliser.
+
+![ACM Applications step 2](/OPP-2023-lab-instruction.github.io/images/create-application-step-2.png)
+
+Cliquez ensuite sur Créer en haut à droite.
+
+Vous devez observer que le déploiement de votre application fonctionne bien dans la vue topologie.
+
+![Topology part 1 ](/OPP-2023-lab-instruction.github.io/images/topology-part1.png)
+
+En cliquant sur route puis sur `launch route url` , vous devriez voir l'application ci-dessous.
+
+![Airport application sno dev](/OPP-2023-lab-instruction.github.io/images/airport-application-sno-dev.png)
+
+{{% notice note %}}
+Vous remarquerez dans l'URL que l'application a été déployée sur sno-dev comme prévu.
+{{% /notice %}}
+
 
 {{% /expand%}}
 
 
 2 - __Déploiement sur le cluster de Dev et de Prod simultanément__
-- Retourner sur votre application **<VOTRE_USER>-airports-frontend**
+
+- Retourner sur votre application **<VOTRE_VILLE>-airports-frontend**
 - Editer là
 - Créer une nouvelle règle de placement utilisant un label **commun** aux 2 clusters
 - Oberver et vérifier que votre application est déployée sur les 2 clusters
@@ -58,6 +86,21 @@ Aller ensuite dans la partie **Applications**
 ## Solution
 
 {{%expand "Solution guidée" %}}
+
+Dans la section application, recherchez votre application créée précédemment puis cliquez dessus.
+
+![Search application](/OPP-2023-lab-instruction.github.io/images/application-search.png)
+
+Cliquez sur Actions > Modifier l'application en haut à droite. Ouvrez ensuite la section Sélectionner les clusters pour le déploiement d'applications et cliquez sur `Deploy application resources on clusters with all specified labels`. Dans ClusterSet, utilisez à nouveau global et dans l'étiquette, sélectionnez deploy=acm.
+
+
+
+![deploy dev and prod](/OPP-2023-lab-instruction.github.io/images/deploy-dev-and-prod.png)
+
+Dans la vue topologique, vous devriez maintenant voir que l'application a été déployée sur les clusters de développement et de production.
+
+![Topology part 2](/OPP-2023-lab-instruction.github.io/images/topology-part2.png)
+
 
 
 {{% /expand%}}
@@ -74,5 +117,6 @@ Nous allons observer les mécanismes GitOps offerts par ACM : pour ce faire, il 
 
 {{%expand "Solution guidée" %}}
 
+TODO
 
 {{% /expand%}}

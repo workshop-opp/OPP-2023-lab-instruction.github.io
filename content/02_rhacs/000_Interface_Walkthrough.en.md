@@ -1,101 +1,115 @@
 ---
-title: "Interface Walkthrough"
+title: "Walkthrough interface"
 draft: false
 weight: 1
 ---
 
-On the following activity, we'll take a quick look at the main features of Red Hat Advanced Cluster Security.
+
+Through this activity, we will quickly see the main features of Red Hat Advanced Cluster Security
+
+## Connection to rhacs
+
+To access rhacs, click on the path menu at the top right and click on `Red Hat Advanced Cluster Security`.
+
+![RHACS connection](/OPP-2023-lab-instruction.github.io/images/rhacs-connection.png)
+
+Select atelier-opp as the authentication provider. Then click on login.
+
+![Login Login](/OPP-2023-lab-instruction.github.io/images/login-workshop-opp.png)
+
+ Authenticate with your username/password provided by the instructor.
+
+## Vulnerability management
+
+Vulnerability management provides a dashboard containing important information on the applications deployed on the cluster. We mainly find the vulnerabilities (CVE included), which are the most widespread or the most recent, from which the Docker images used come. The dashboard also provides the vulnerabilities present within the cluster.
 
 
-## Vulnerability Management
+![Vulnerabilities](/OPP-2023-lab-instruction.github.io/images/vuln_manag.png)
 
-Vulnerability management provides a dashboard containing important information about the applications deployed on the cluster. It mainly shows which vulnerabilities (including CVEs) are the most widespread or the most recent, and where the Docker images used originate. The dashboard also shows which vulnerabilities are present in the cluster.
-
-
-![Vulnerabilités](/OPP-2023-lab-instruction.github.io/images/vuln_manag.png)
-
-Protect your containers against vulnerabilities from the moment images are created through to deployment and execution. RHACS can block the deployment of vulnerable images and integrates with your approved registries, including OpenShift Container Registry, for granular policy enforcement. RHACS also provides extensive support for third-party scanners such as Anchore, Red Hat Quay, Clair and Tenable to complement your existing image scanning tools.
-
-## Risk Management
+  RHACS can scan deployed images and integrates with your registry. RHACS also provides extensive support for third-party scanners such as Anchore, Red Hat Quay, Clair, and Tenable to complement your existing image scanning tools.
 
 
-Let's take a look at the Risk view, where we go beyond the basics of vulnerabilities to understand how deployment configuration and execution activity affect the likelihood of an exploit occurring, and how successful these exploits will be.
+## Risk management
 
 
-![Riks](/OPP-2023-lab-instruction.github.io/images/risk.png)
+Let's take a look at the Risks view, where we go beyond the basics of vulnerabilities to understand how deployment configuration and execution activity affect the likelihood of an exploit occurring.
 
 
-This list displays all deployments, in all clusters and namespaces, sorted by risk priority.
-Risk is calculated according to application activity, number of deployments and CVEs present.
-The view is prioritized.
-This feature enables you to concentrate your efforts on the deployments that present the greatest risk.
+![Risk](/OPP-2023-lab-instruction.github.io/images/risk.png)
+
+
+This list displays deployments, across all clusters and namespaces, ordered by risk priority.
+The risk is calculated according to the activity of the application, its exposure, the number of deployments and the CVEs present.
+The view is ranked in order of priority.
+Thus, this functionality will allow you to concentrate your efforts on the deployments that present the most risks.
 
 
 
-## Network Graph
+## Netwokr Graph
 
-The Network Graph is a flow diagram, firewall diagram and firewall rule generator in one.
+The Network Graph is both a flow view and a NetworkPolicy generator.
 
 
 ![Network](/OPP-2023-lab-instruction.github.io/images/network.png)
 
 
-Network Graph is a function for visualizing deployments in your namespaces.
-It shows you, in the form of a flow diagram, the various connections existing on your different pods.
-Based on the diagram, you can make decisions about adding or removing flows.
-The best thing about Network Graph is that RHACS can generate network policies to protect and partition your connection flows.
+Network Graph is a functionality for visualizing deployments present on your namespaces.
+Thus, this functionality presents you in the form of a flow diagram, the different connections existing on your different pods.
+Based on the diagram you can make decisions about adding or removing flows.
+The strong point of the Network Graph is that RHACS can generate network policies for you in order to better protect and partition your connection flows.
 
+## Violations
 
-## Violation
+The Violations section is a feature in the form of a register that records all specific moments when a policy created by the security team was not respected in your cluster.
 
-Violations is a feature in the form of a log that records all the specific moments when a CVE or policy created by the security team has been discovered by one of the objects in your cluster: images and their components, deployments, runtime.
-
-This registry enables you to see at a glance the vulnerabilities present in your applications, specifying information such as :
+This register allows you, at a glance, to see the policy violations present on your cluster by filtering several pieces of information such as:
 - the namespace concerned
-- type: specifies whether the vulnerability or policy is present in a deployment, secret, namespace, etc.
-- enforced: whether or not the deployment has been blocked
-- severity level
-- vulnerability category
-- when the vulnerability or policy was detected (build,deployment,runtime)
+- the type: specifies if the vulnerability or policy is present on a deployment, secret, namespace etc...
+- enforced: the deployment has been blocked or not
+- the level of severity
+- the vulnerability category
+- when the vulnerability or policy was detected (build, deployment, runtime)
   
+
+
+
 
 ![Violations](/OPP-2023-lab-instruction.github.io/images/violations1.png)
 
 Click on any violation to see more details.
 
 
-![Violations2](/OPP-2023-lab-instruction.github.io/images/violation2.png)
+![Violation2](/OPP-2023-lab-instruction.github.io/images/violation2.png)
 
 
 ## Compliance Operator
 
-Compliance Operator provides you with a dashboard that lets you access defined metrics to see the state of compliance required in certain fields of activity, such as banking and medical.
-Complance Operator evaluates both Kubernetes API resources and Openshift resources, as well as the nodes running the cluster.
-This feature uses OpenSCAP, a NIST-certified tool, to analyze and apply the security policies provided by the content.
+The Compliance Operator provides you with a dashboard that allows you to access defined metrics to see the state of compliance required in certain areas of activity such as banking and medicine.
+The Compliance Operator evaluates both Kubernetes API resources and Openshift resources, as well as the nodes running on the cluster.
+This feature uses OpenSCAP, a NIST-certified tool, to analyze and enforce security policies provided by content.
 
 
-Click on "Scan Environnement"
+
+Click “Environmental Scan”
 
 
 ![Compliance_Operator](/OPP-2023-lab-instruction.github.io/images/compliance.png)
 
 
-## Configuration Management
+## Configuration management
 
-Configuration Management, provides efficient configuration management that combines all entities on a single page. It gathers information on all your clusters, namespaces, nodes, deployments, images, secrets, users, groups, service accounts and roles in a single view, helping you to visualize different entities and the connections between them.
+Configuration Management, provides efficient configuration management that combines all entities on a single page. It brings together information about all your clusters, namespaces, nodes, deployments, images, secrets, users, groups, service accounts and roles in a single view, helping you visualize different entities and the connections between them.
 
 
-## Policy Management
+## Policy management
 
-With policy management, RHACS lets you use ready-to-use security policies and define customized multi-factor policies for your container environment.
-By configuring these policies, you can automatically prevent the deployment of high-risk services in your environment and respond to runtime security incidents.
+With policy management, RHACS allows you to use out-of-the-box security policies and define custom multi-factor policies for your container environment.
+Configuring these policies allows you to automatically prevent high-risk service deployments in your environment and respond to runtime security incidents.
+
 
 ![Policy](/OPP-2023-lab-instruction.github.io/images/policy_management.png)
 
 
-All the policies supplied with the product are designed with the aim of providing targeted corrective measures that enhance security hardening.
+All policies provided with the product are designed with the goal of providing targeted corrective actions that improve security hardening.
 
-You'll see that this list contains many build-time and deployment policies to detect configuration errors early in the pipeline, but also run-time policies that refer to specific hardening recommendations.
-
-
-
+You will see that this list contains many policies on build and deployment to detect configuration errors (for example in a pipeline), but also execution policies which refer to specific hardening recommendations.

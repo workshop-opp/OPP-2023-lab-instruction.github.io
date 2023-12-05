@@ -29,11 +29,11 @@ La policy doit répondre au critère suivant :
 
 | Parameters | Value |
 |----------|----------|
-| Name | policy-<YOURCOUNTRY> |
+| Name | **policy-<VOTRE_VILLE>** |
 | Categories | Vulnerability Management |
 | Lifecycle stages| Build and Deploy |
 | Response method | Inform and enforce |
-| Restrict-by-scope | <YOURCOUNTRY>-ns |
+| Restrict-by-scope | **<VOTRE_VILLE>-ns** |
 | Cluster | local-cluster |
 |----------|----------|
 

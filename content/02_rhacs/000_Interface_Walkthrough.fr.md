@@ -5,7 +5,7 @@ weight: 1
 ---
 
 
-A travers les pages suivantes, nous verrons rapidement les principales fonctionnalités de Red Hat Advanced Cluster Security
+A travers cette activité, nous verrons rapidement les principales fonctionnalités de Red Hat Advanced Cluster Security
 
 
 ## Gestion des vulnérabilités
@@ -13,7 +13,7 @@ A travers les pages suivantes, nous verrons rapidement les principales fonctionn
 La gestion des vulnérabilités fournit un dashboard ou se trouve des informations importantes sur les application déployés sur le cluster. On y trouve principalement les vulnérabilités (CVE comprises), lesquelles sont les plus répandues ou les plus récentes, d'où proviennent les images Docker utilisés. Le dashboard fournit aussi les vulnérabilités présentes dans au sein du cluster.
 
 
-![Vulnérabilités](/OPP-2023-lab-instruction.github.io/images/vuln_manag.png)
+![Vulnerabilités](/OPP-2023-lab-instruction.github.io/images/vuln_manag.png)
 
 Protégez vos conteneurs contre les vulnérabilités depuis le moment où les images sont créées jusqu'à leur déploiement et leur exécution. RHACS peut bloquer le déploiement des images vulnérables et s'intègre à vos registres approuvés, y compris OpenShift Container Registry, pour une application granulaire des politiques. RHACS fournit également une prise en charge étendue des scanners tiers tels que Anchore, Red Hat Quay, Clair et Tenable pour compléter vos outils de numérisation d'images existants.
 
@@ -34,7 +34,7 @@ Ainsi, cette fonctionnalité permettra de concentrer vos efforts sur les déploi
 
 
 
-## Graphique de réseau
+## Netwokr Graph
 
 Le Network Graph est à la fois un diagramme de flux, un diagramme de pare-feu et un générateur de règles de pare-feu.
 
@@ -75,7 +75,7 @@ Cliquez sur n'importe quelle violation pour voir plus de détails.
 
 Compliance Operator vous fournit un dashboard qui permet d'accèder à des métriques définit pour voir l'état de conformité exigé dans certains domaines d'activités comme le domaine bancaire et médicale.
 Complance Operator évalue à la fois les ressources de l'API Kubernetes et les ressource d'Openshift, ainsi que les nœuds exécutant le cluster.
-L'opérateur de conformité utilise OpenSCAP, un outil certifié NIST, pour analyser et appliquer les politiques de sécurité fournies par le contenu.
+Cette fonctionnalité utilise OpenSCAP, un outil certifié NIST, pour analyser et appliquer les politiques de sécurité fournies par le contenu.
 
 
 

@@ -1,13 +1,13 @@
 ---
 title: "Observability"
 draft: false
-weight: 2
+weight: 0
 ---
 
 
 ## Contexte 
 
-Dans notre environnement de cluster de production, nous avons récemment rencontré un problème critique lié à l'allocation excessive de ressources par l'une des équipes. Cela a conduit à un engagement de requêtes CPU dépassant 300%. Cette situation compromet la disponibilité et la stabilité de notre infrastructure, nécessitant une identification rapide du namespace surchargé et la mise en place de mesures de contrôle des quotas pour prévenir de futurs incidents.
+Dans notre environnement de cluster de production, nous avons récemment rencontré un problème critique lié à l'allocation excessive de ressources par l'une des équipes. Cela a conduit à un engagement de requêtes CPU dépassant 300%. Cette situation compromet la disponibilité et la stabilité de notre infrastructure, nécessitant une identification rapide du namespace suralloué.
 
 ## Objectif de l'exercice 
 
@@ -15,7 +15,7 @@ L'objectif de cet exercice est de détecter le namespace et le deployment respon
 
 ## Étapes de l'exercice 
 
-Accédez au cluster de production et recueillez des informations sur l'utilisation des ressources.
+Accédez au cluster de hub et recueillez des informations sur l'utilisation des ressources.
 
 Pour cela rendez-vous dans la section Infrastructure et cliquez sur Grafana (en haut a gauche).
 

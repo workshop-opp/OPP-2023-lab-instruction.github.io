@@ -4,6 +4,8 @@ draft: false
 weight: 3
 ---
 
+## Context
+
 It’s December 19, 2021 (yes, you read that right, two years earlier, to the day).
 
 The AWS Cloud Team is alerting you that an AWS API key has been compromised and used to deploy crypto mining software.
@@ -33,19 +35,22 @@ $ dig +short public.requestbin.com
 $ whois 18.155.129.83 |grep OrgTechName
 OrgTechName: Amazon EC2 Network Operations
 ```
+## Objective of the exercise
 
 Your mission, if you accept it, is to investigate the Lab environment in search of the path taken by the attacker to perpetrate this data exfiltration.
 The objective is achieved when you find the URL of the **Request Bin** used by the attacker to exfiltrate the API key.
 
 ![Request Bin showing exfiltrated AWS API key](/OPP-2023-lab-instruction.github.io//images/Attack-Flow-Analysis-Request-Bin.png)
 
-Up to you !
+## Up to you !
 
 Clues:
 
 - Start with the **Violations** section and filter the view with `deployment:visa-processor namespace:data-theft`
 - Switch to the **Network Graph** section and display the flows of the cluster **local-cluster**, namespace **data-theft**. Click on the **information-service** and **back-office** deployments and compare their flows. Which one seems most suspicious to you?
 - Return to the **Violations** section and filter the view with the name of the deployment that seems most suspicious to you.
+
+## Solution
 
 {{%expand "Solution" %}}
 

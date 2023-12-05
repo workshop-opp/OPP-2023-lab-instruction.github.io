@@ -40,7 +40,7 @@ La policy doit répondre au critère suivant :
 ## Solution
 
 
-{{%expand "Solution: Exporter la liste des Deployment touche par la CVE `CVE-2022-32207` " %}}
+{{%expand "Solution: Exporter la liste des déploiements concernés par le CVE `CVE-2022-32207` " %}}
 
 Cliquez sur Application et infrastructure, puis sur Deployment. 
 
@@ -54,7 +54,7 @@ Vous verrez alors apparaître tous les déploiements concernés par notre vulné
 
 {{% /expand%}}
 
-{{%expand "Solution: Creation de la Policy" %}}
+{{%expand "Solution : Création de la Policy" %}}
 
 ![Policy-1](/OPP-2023-lab-instruction.github.io/images/create-policy-step-1.png)
 

@@ -11,16 +11,16 @@ Dans cette partie, nous allons voir comment RHACS peut totalement s'intègrer da
 ## Contexte
 
 
-L'équipe de développeur utilise une pipeline pour git clone un dépôt distant, build l'image et déployer l'application sur le cluster.  
+L'équipe de développement utilise une pipeline pour  cloner un dépôt distant, build l'image et déployer l'application sur le cluster.  
 Entre l'étape du build et du déploiement, nous avons 2 étapes parallèles : image-scan, image-check.
 Ces étapes permet à RHACS de chercher les vulnérabilités présentes dans l'application.
-RHACS vous informe qu'une CVE est présente sur l'application qui est déployé via la pipeline.
 
 ## Objectifs de l'exercice
 
-L'objectif est de trouver la CVE qui est présente dans l'application est bloqué tout nouveau déploiment.
+L'objectif est de trouver la CVE qui est présente dans l'application et bloquer tout nouveau déploiment.
 
 ## Etapes de l'exercice
+
 Pour parvenir à l'objectif de l'activité, vous devez :
 - Lancer la pipeline pour permettre au déploiement de l'application
 - trouver la CVE présente dans l'application

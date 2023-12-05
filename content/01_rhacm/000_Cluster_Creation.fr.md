@@ -5,60 +5,44 @@ weight: 1
 ---
 
 
-## Contexte :
+## Création de cluster (réalisé par le formateur)
 
-In our production cluster environment, we recently encountered a critical issue related to over-allocation of resources by one of the teams. This led to CPU request engagement exceeding 300%. This situation compromises the availability and stability of our infrastructure, requiring rapid identification of overloaded namespace and implementation of quota control measures to prevent future incidents.
+Dans les conditions préalables à ce cours, les informations d'identification AWS ont été créées à partir de la clé d'accès et de la clé secrète.
 
-## Goal :
-
-The objective of this exercise is to detect the namespace and deployment responsible for the excessive cpu request allocation and to patch it.
-
-## Actions :
-
-Access the production cluster and collect information about resource usage.
-
-To do this, go to the Infrastructure section and click on Grafana (top left).
-
-![Grafana](/OPP-2023-lab-instruction.github.io/images/grafana-access.png)
-
-A certain number of dashboards are present by default when installing observability. To access it, click on Dashboards then Browse.
-
-![Dashboard](/OPP-2023-lab-instruction.github.io/images/browse-dashboard.png)
-
-## Your turn 
-
-From these different dashboards we ask you to find which deployment has the CPU request overestimated by mistake (100 cpu instead of 100 milli-cpu). When you have found the name of the namesapce, apply the following patch to it to remedy the overallocation:
-
-```shell
-oc patch deployment <deployment-name> -p '{"spec":{"template":{"spec":{"containers":[{"name":"<deployment-name>","resources":{"requests":{"cpu":"10m"}}}]}}}}' -n <namespace-name>
-```
-
-## Solution
-
-{{%expand "Solution" %}}
-
-The CPU quota table is available in the Dashboard General/Kubernetes/Compute Resources/Cluster. Once in this dashboard select the sno-prod Cluster. In the Cpu Quota Table click on CPU Requests to sort them in order. You should then observe that the Mirage namespace has a request of 100 cpu while it only uses 0.001. So this is the problematic namesapce.
+- Dans le menu de navigation, accédez à Automatiser l'infrastructure > Clusters.
 
 
-![Dashboard](/OPP-2023-lab-instruction.github.io/images/tableau-cpu.png)
+- Sur la page Clusters, cliquez sur Créer un cluster. Et sélectionnez Amazon Web Services. Sélectionnez Autonome.
 
-Connect to the sno-prod cluster and go to the mirage namespace. Click Workloads > Pods. We observe that the todo-app pods are in Pending status because the nodes do not have enough resources to respond to our request. We observe that the Deployment associated with it is todo-app. So all we have to do is apply the next patch.
+![Infrastructure RHACM](/OPP-2023-lab-instruction.github.io/images/rhacm-infrastructure.png)
 
-![Request](/OPP-2023-lab-instruction.github.io/images/resource-request.png)
+- Nous allons maintenant remplir le formulaire pour créer un cluster avec les détails ci-dessous
 
-```shell
-oc patch deployment todo-app -p '{"spec":{"template":{"spec":{"containers":[{"name":"todo-app","resources":{"requests":{"cpu":"10m"}}}]}}}}' -n mirage
-```
+| Paramètres | Valeur |
+|----------|----------|
+| Titre de fournisseur d'infrastructure | informations d'identification AWS |
+| Nom du cluster | sno-démo |
+| Ensemble de clusters | par défaut |
+| Domaine DNS de base | sandbox2156.opentlc.com |
+| Image de sortie | OpenShift 4.14.3 |
+| Paramètres | Valeur |
+|----------|----------|
+| Région | ue-ouest-2 |
 
-{{% /expand%}}
+Ensuite nous modifierons directement le fichier yaml pour créer un SNO au lieu d'un cluster Openshift complet.
 
+Pour ce faire, activez la bascule pour obtenir « Yaml : On » et cliquez sur le dossier install-config.
 
+![Yaml activé](/OPP-2023-lab-instruction.github.io/images/yaml-on.png)
 
+Mettez ensuite à jour les répliques principales de 3 à 1 et les répliques de travail de 3 à 0.
 
+Vous devriez maintenant avoir le fichier d'installation ci-dessous config.yaml.
 
+- Cliquez maintenant sur Suivant, jusqu'à la révision, et enfin cliquez sur Créer.
 
+- Vous pouvez désormais suivre le processus de création du cluster dans l'interface utilisateur RHACM avec les journaux d'installation du cluster.
 
+![[Processus d'installation]](/OPP-2023-lab-instruction.github.io/images/creating-cluster-sno-demo.png)
 
-
-
-
+- À la fin, vous devriez voir votre cluster nouvellement créé dans les états prêts dans l'interface utilisateur.

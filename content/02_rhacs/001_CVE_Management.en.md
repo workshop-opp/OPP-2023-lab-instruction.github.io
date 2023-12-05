@@ -4,36 +4,35 @@ draft: false
 weight: 2
 ---
 
-# Contexte :
+#Context :
 
-L'équipe de sécurité informatique a reçu une alerte concernant une nouvelle vulnérabilité critique (CVE) qui pourrait avoir un impact important sur les systèmes. Cette CVE affecte plusieurs  applications. Pour prévenir toute exploitation potentielle de cette vulnérabilité, il est crucial de détecter et d'empêcher tout nouveau déploiement d'application susceptible de la contenir.
+The IT Security team received an alert regarding a new critical vulnerability (CVE) that could have a significant impact on systems. This CVE affects several applications. To avoid potential exploitation of this vulnerability, it is crucial to detect and prevent any new application deployments that may contain it.
 
-# Objectif de l'exercice :
+# Objective of the exercise:
 
-L'objectif principal est de mettre en place une politique de sécurité qui bloque tout déploiement d'application contenant la CVE identifiée sur le cluster concerné. Cette politique doit être automatisée pour prévenir tout risque de déploiement involontaire d'une application vulnérable.
+The main objective is to implement a security policy that blocks any application deployment containing the identified CVE on the affected cluster. This policy must be automated to prevent any risk of unintentional deployment of a vulnerable application.
 
-# Étapes de l’exercice :
+# Exercise Steps:
 
-Acceder a l'interface RHACS et rendez vous dans la section Vulnerability Management. Cette interface vous donne une visibilite sur l'ensemble des images appartenant a votre scope.
+Access the RHACS interface and go to the Vulnerability Management section. This interface gives you visibility on all images belonging to your scope.
 
-# A vous de jouer 
+# Up to you
 
-A partir de ces differents dashboard nous vous demandons de retrouver et d'exporter toutes les deployment affecte par la CVE sous le format PDF. 
+From these different dashboards we ask you to find and export all the deployments affected by the CVE in PDF format.
 
-Une fois cette etape realiser. Rendez vous dans Platform Configuration > Policy Management et cliquez sur Create Policy. Vous completerez le formulaire de sorte que toutes les images portant la CVE `CVE X` soit bloque au Stage Build et Deploy avec une methode de reponse de type Inform and Enforce.
+Once this step is completed. Go to Platform Configuration > Policy Management and click Create Policy. You fill out the form so that all images with the CVE `CVE X` are blocked during Stage Build and Deploy with an Inform and Enforce response method.
 
 # Solution
 
 
-{{%expand "Solution: Exporter la liste des Deployment touche par la CVE CVE-X" %}}
+{{%expand "Solution: Export the list of deployments affected by CVE CVE-X" %}}
 
-Cliquez sur Application & Infrastructure puis cliquez sur Deployment. Dans la barre de filtre ecrivez CVE puis le numero de notre CVE
+Click Application and Infrastructure, then Deployment. In the filter bar write CVE then the number of our CVE
 
-Vous verrez alors apparaitre tout les deployment concerner par notre vulnerabilite. Cliquez alors sur Export en haut a gauche pour exporter un PDF contenant l'ensemble des informations.
+You will then see all the deployments affected by our vulnerability appear. Then click Export at the top left to export a PDF containing all the information.
 
-{{% /expand%}}
+{{% /develop%}}
 
-{{%expand "Solution: Creation de la Policy" %}}
-
+{{%expand "Solution: Creating the policy" %}}
 
 

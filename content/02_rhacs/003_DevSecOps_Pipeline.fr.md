@@ -30,7 +30,7 @@ Pour parvenir à l'objectif de l'activité, vous devez :
 
 ## A vous de jouer
 
-## Solution
+{{%expand "Solution:" %}}
 
 
 Dans Openshift Pipelines :
@@ -79,7 +79,7 @@ Maintenant, retournez sur votre pipeline et relancez un run.
 Comme vous pouvez le voir, l'application n'est pas deployé sur le cluster, car RHACS bloque le déploiement.
 
 
-
+{{% /expand%}}
 
 
 

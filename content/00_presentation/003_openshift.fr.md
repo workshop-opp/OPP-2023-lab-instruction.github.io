@@ -24,5 +24,11 @@ weight: 4
 * **URL de l'API du cluster OCP :** `https://api.workshop-opp.sandbox2156.opentlc.com:6443`
 
 Il existe un utilisateur OpenShift dédié pour chaque utilisateur.
-Sur votre table, vous trouverez une affiche avec les informations pertinentes.
+
+
+{{% notice tip %}}
+Votre instructeur vous fournira votre identifiant qui correspond à un nom de ville ainsi que votre mot de passe.
+{{% /notice %}}
+
+
 Pour vous connecter à votre cluster Openshift, cliquez sur *URL de la console OCP Cluster* ci-dessus et renseignez votre nom d'utilisateur et votre mot de passe. Vous aurez accès au *Terminal Web* en cliquant sur l'icône **>_** en haut à droite. Le Terminal Web fournit le client *oc*.

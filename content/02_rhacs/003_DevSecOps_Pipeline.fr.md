@@ -17,7 +17,7 @@ Ces étapes permettent à RHACS de chercher les vulnérabilités présentes dans
 
 ## Objectif de l'exercice
 
-L'objectif est de réaliser comment s'intégre RHACS dans une pipeline.
+L'objectif est de trouver quelle vulnérabilité critique est présente sur la pipeline.
 
 
 
@@ -50,14 +50,15 @@ Vous devez remplir les informations suivantes avant de lancer le pipeline :
 ![Pipelines](/OPP-2023-lab-instruction.github.io/images/pipeline_ville.png)
 
 
+Cliquez sur **start**
 
 ## A vous de jouer
 
-
+Rendez-vous dans les logs de la pipeline, pour trouver la vulnérabilité de niveau **critical**
 
 ## Solution
 
-{{%expand "Solution: Exporter la liste des Deployment touche par la CVE `CVE-2022-32207` " %}}
+{{%expand "Solution" %}}
 
 
 

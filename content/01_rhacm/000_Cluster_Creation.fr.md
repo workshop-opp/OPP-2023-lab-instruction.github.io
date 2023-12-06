@@ -12,7 +12,7 @@ Dans les conditions préalables à ce cours, les informations d'identification A
 - Dans le menu de navigation, accédez à Automatiser l'infrastructure > Clusters.
 
 
-- Sur la page Clusters, cliquez sur Créer un cluster. Et sélectionnez Amazon Web Services. Sélectionnez Autonome.
+- Sur la page Clusters, cliquez sur Créer un cluster. Et sélectionnez Amazon Web Services. Sélectionnez Standalone.
 
 ![Infrastructure RHACM](/OPP-2023-lab-instruction.github.io/images/rhacm-infrastructure.png)
 
@@ -21,23 +21,21 @@ Dans les conditions préalables à ce cours, les informations d'identification A
 | Paramètres | Valeur |
 |----------|----------|
 | Titre de fournisseur d'infrastructure | informations d'identification AWS |
-| Nom du cluster | sno-démo |
+| Nom du cluster | sno-demo |
 | Ensemble de clusters | par défaut |
 | Domaine DNS de base | sandbox2156.opentlc.com |
 | Image de sortie | OpenShift 4.14.3 |
 | Paramètres | Valeur |
 |----------|----------|
-| Région | ue-ouest-2 |
+| Région | eu-west-2 |
 
 Ensuite nous modifierons directement le fichier yaml pour créer un SNO au lieu d'un cluster Openshift complet.
 
-Pour ce faire, activez la bascule pour obtenir « Yaml : On » et cliquez sur le dossier install-config.
+Pour ce faire, activez le toggle pour obtenir « Yaml : On » et cliquez sur le dossier install-config.
 
 ![Yaml activé](/OPP-2023-lab-instruction.github.io/images/yaml-on.png)
 
-Mettez ensuite à jour les répliques principales de 3 à 1 et les répliques de travail de 3 à 0.
-
-Vous devriez maintenant avoir le fichier d'installation ci-dessous config.yaml.
+Mettez ensuite à jour les controle plane replicas de 3 à 1 et les worker replicas de 3 à 0.
 
 - Cliquez maintenant sur Suivant, jusqu'à la révision, et enfin cliquez sur Créer.
 

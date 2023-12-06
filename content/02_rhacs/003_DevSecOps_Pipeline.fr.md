@@ -13,22 +13,47 @@ Dans cette partie, nous allons voir comment RHACS peut totalement s'intègrer da
 
 L'équipe de développement utilise une pipeline pour  cloner un dépôt distant, build l'image et déployer l'application sur le cluster.  
 Entre l'étape du build et du déploiement, nous avons 2 étapes parallèles : image-scan, image-check.
-Ces étapes permet à RHACS de chercher les vulnérabilités présentes dans l'application.
+Ces étapes permettent à RHACS de chercher les vulnérabilités présentes dans l'application.
 
-## Objectifs de l'exercice
+## Objectif de l'exercice
 
-L'objectif est de trouver la CVE qui est présente dans l'application et bloquer tout nouveau déploiment.
+L'objectif est de réaliser comment s'intégre RHACS dans une pipeline.
+
+
 
 ## Etapes de l'exercice
 
-Pour parvenir à l'objectif de l'activité, vous devez :
-- Lancer la pipeline pour permettre au déploiement de l'application
-- trouver la CVE présente dans l'application
-- Modifier la policy correspondante à la policy pour bloquer tout nouveau déploiement
-- Relancer la pipeline
+Pour commencer,allez sur le cluster hub, assurez-vous d'être dans **local-cluster**
+
+![ACM Console](/OPP-2023-lab-instruction.github.io/images/acm-startconsole.png)
+
+Ensuite, cliquez sur Pipelines, puis de nouveau pipelines.
+Ensuite en haut à gauche dans **projects**, sélectionner le namespace **prototype**
+
+![Pipelines](/OPP-2023-lab-instruction.github.io/images/pipeline_menu.png)
+
+
+Vous disposer d'une pipeline qui s'appelle clone-build-push.
+
+Cliquez sur **start** comme indiqué ci dessous
+
+![Pipelines](/OPP-2023-lab-instruction.github.io/images/start_pipeline.png)
+
+Ensuite, le menu suivant s'affiche :
+
+Vous devez remplir les informations suivantes avant de lancer le pipeline :
+
+- **ville** : entrer le nom de votre ville en référence à votre namespace
+- **tekton-pvc** : sélectionner **PersistentVolumeClaim** puis **tekton-pvc**
+- **docker-config** : sélectionner **Secret** puis **pipeline-secret**
+
+![Pipelines](/OPP-2023-lab-instruction.github.io/images/pipeline_ville.png)
+
 
 
 ## A vous de jouer
+
+
 
 ## Solution
 

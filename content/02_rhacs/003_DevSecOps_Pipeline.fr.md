@@ -25,7 +25,7 @@ L'objectif est de trouver quelle vulnérabilité critique est présente sur la p
 
 Pour commencer,allez sur le cluster hub, assurez-vous d'être dans **local-cluster**
 
-![ACM Console](/OPP-2023-lab-instruction.github.io/images/acm-startconsole.png)
+![Pipelines](/OPP-2023-lab-instruction.github.io/images/acm-startconsole.png)
 
 Ensuite, cliquez sur Pipelines, puis de nouveau pipelines.
 Ensuite en haut à gauche dans **projects**, sélectionner le namespace **prototype**

@@ -10,14 +10,14 @@ In this section, we'll look at how RHACS can be fully integrated into a DevSecOp
 ## Context
 
 
-The development team uses a pipeline to git clone a remote repository, build the image and deploy the application on the cluster.  
+The development team uses a pipeline to clone a remote repository, build the image and deploy the application on the cluster.  
 Between the build and deployment stages, we have 2 parallel steps: image-scan, image-check.
 These steps enable RHACS to scan the application for vulnerabilities.
-RHACS informs you that a CVE is present in the application deployed via the pipeline.
 
 ## Activity goals
 
-The goal is to find the CVE that is present in the application and block any new deployment.
+The aim is to find out which critical vulnerabilities are present in the pipeline.
+
 
 ## Activity stages
 

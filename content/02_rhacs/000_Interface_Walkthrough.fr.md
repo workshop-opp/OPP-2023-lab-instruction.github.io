@@ -46,7 +46,7 @@ Ainsi, cette fonctionnalité permettra de concentrer vos efforts sur les déploi
 
 
 
-## Netwokr Graph
+## Netwok Graph
 
 Le Network Graph est à la fois une vue des flux, et un générateur de NetworkPolicy.
 

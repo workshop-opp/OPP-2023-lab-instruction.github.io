@@ -45,7 +45,7 @@ Thus, this functionality will allow you to concentrate your efforts on the deplo
 
 
 
-## Netwokr Graph
+## Netwok Graph
 
 The Network Graph is both a flow view and a NetworkPolicy generator.
 

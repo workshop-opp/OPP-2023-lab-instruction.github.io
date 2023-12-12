@@ -14,7 +14,7 @@ Notre application étant de plus en plus critique, il a été décidé de la dé
 
 ## Objectif de l'exercice
 
-L'objectif de cet exercice est de déployer notre application **airports-frontend** en mode multi-cluster en utilisant les mécanismes d'OpenShit Advanced Cluster Managment.
+L'objectif de cet exercice est de déployer notre application **airports-frontend** en mode multi-cluster en utilisant les mécanismes d'OpenShit Advanced Cluster Management.
 
 ## Étapes de l'exercice
 
@@ -35,7 +35,7 @@ Aller ensuite dans la partie **Applications**
 - Créer une application de type **Subscription**
 - Son nom sera **<VOTRE_VILLE>-airports-frontend**
 - Son namespace sera **<VOTRE_VILLE>-ns**
-- Repository **Git** basé sur [airports-frontend](https://github.com/workshop-opp/airports-frontend.git)
+- Repository **Git** basé sur [https://github.com/workshop-opp/airports-frontend.git](https://github.com/workshop-opp/airports-frontend.git)
 - Branch : **main**
 - Path : **k8s**
 - Déployer l'application sur le Cluster sets **global** et choisissez 1 label identifiant UNIQUEMENT notre cluster de développement 
@@ -44,7 +44,7 @@ Aller ensuite dans la partie **Applications**
 Astuce : vous pouvez trouver l'ensemble des labels de chaque cluster dans le menu Infrastructure
 {{% /notice %}}
 
-- Vérifier dans l'onglet **Topology** que l'application s'est bien déplpoyée sur le bon cluster (vous pouvez également vous connecter à la console OpenShift du cluster de Dev et vérifier que le nouveau namespace contient votre application )
+- Vérifier dans l'onglet **Topology** que l'application s'est bien déployée sur le bon cluster (vous pouvez également vous connecter à la console OpenShift du cluster de Dev et vérifier que le nouveau namespace contient votre application )
 
 ## Solution
 
@@ -109,7 +109,7 @@ Dans la vue topologique, vous devriez maintenant voir que l'application a été 
 3 - __Exercice BONUS : GitOps avec ACM__
 
 Nous allons observer les mécanismes GitOps offerts par ACM : pour ce faire, il vous faudra **OBLIGATOIREMENT** un compte GitHub.
-- Connecter vous avec votre login personnel à [GitHub](https://github.com)
+- Connecter vous avec votre login personnel à [https://github.com](https://github.com)
 - Effectuez un fork du repository https://github.com/workshop-opp/airports-frontend
 - Modifier l'application **<VOTRE_USER>-airports-frontend** pour utiliser le repository que vous venez de forker (https://github.com/<VOTRE_USER_GITHUB/airports-frontend)
 - Modifier le nombre de replicas dans le fichier `k8s/deployment.yaml` sur le repository de VOTRE compte

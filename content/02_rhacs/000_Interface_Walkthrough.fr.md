@@ -27,7 +27,7 @@ La gestion des vulnérabilités fournit un dashboard où se trouve des informati
 
 ![Vulnerabilités](/OPP-2023-lab-instruction.github.io/images/vuln_manag.png)
 
- RHACS peut scanner les images deployées et s'intègre à vos registry. RHACS fournit également une prise en charge étendue des scanners tiers tels que Anchore, Red Hat Quay, Clair et Tenable pour compléter vos outils de numérisation d'images existants.
+ RHACS peut scanner les images deployées et s'intègre à vos registry. RHACS fournit également une prise en charge étendue des scanners tiers tels que Anchore, Red Hat Quay, Clair et Tenable pour compléter vos outils de scan d'images existants.
 
 
 ## Gestion des risques

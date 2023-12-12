@@ -29,9 +29,11 @@ Aller ensuite dans la partie **Applications**
 ![ACM Applications](/OPP-2023-lab-instruction.github.io/images/acm-applications.png)
 
 
-## A vous de jouer 
+## A vous de jouer !
 
-1 - __Déploiement sur le cluster de développement__
+
+#### Exercice 1 : 
+__1 - Déploiement sur le cluster de développement__
 - Créer une application de type **Subscription**
 - Son nom sera **<VOTRE_VILLE>-airports-frontend**
 - Son namespace sera **<VOTRE_VILLE>-ns**
@@ -46,9 +48,8 @@ Astuce : vous pouvez trouver l'ensemble des labels de chaque cluster dans le men
 
 - Vérifier dans l'onglet **Topology** que l'application s'est bien déployée sur le bon cluster (vous pouvez également vous connecter à la console OpenShift du cluster de Dev et vérifier que le nouveau namespace contient votre application )
 
-## Solution
 
-{{%expand "Solution guidée" %}}
+{{%expand "Solution Exercice 1" %}}
 
 Remplissez le formulaire comme indiqué ci-dessous (en remplaçant `tokyo` par le nom de votre ville).
 
@@ -75,17 +76,15 @@ Vous remarquerez dans l'URL que l'application a été déployée sur sno-dev com
 
 {{% /expand%}}
 
-
-2 - __Déploiement sur le cluster de Dev et de Prod simultanément__
+#### Exercice 2 :
+__2 - Déploiement sur le cluster de Dev et de Prod simultanément__
 
 - Retourner sur votre application **<VOTRE_VILLE>-airports-frontend**
 - Editer là
 - Créer une nouvelle règle de placement utilisant un label **commun** aux 2 clusters
 - Oberver et vérifier que votre application est déployée sur les 2 clusters
 
-## Solution
-
-{{%expand "Solution guidée" %}}
+{{%expand "Solution Exercice 2" %}}
 
 Dans la section application, recherchez votre application créée précédemment puis cliquez dessus.
 
@@ -105,15 +104,16 @@ Dans la vue topologique, vous devriez maintenant voir que l'application a été 
 
 {{% /expand%}}
 
-
-3 - __Exercice BONUS : GitOps avec ACM__
+#### Exercice 3 (Bonus) :
+__3 - GitOps avec ACM__
 
 Nous allons observer les mécanismes GitOps offerts par ACM : pour ce faire, il vous faudra **OBLIGATOIREMENT** un compte GitHub.
 - Connecter vous avec votre login personnel à [https://github.com](https://github.com)
 - Effectuez un fork du repository https://github.com/workshop-opp/airports-frontend
 - Modifier l'application **<VOTRE_USER>-airports-frontend** pour utiliser le repository que vous venez de forker (https://github.com/<VOTRE_USER_GITHUB/airports-frontend)
-- Modifier le nombre de replicas dans le fichier `k8s/deployment.yaml` sur le repository de VOTRE compte
-- Oberver le changement du nombre de PODs déployés
+- Modifier le nombre de replicas à 2 (au lieu de 1) dans le fichier `k8s/deployment.yaml` sur le repository de VOTRE compte
+- Enregistrer et commiter votre code
+- Oberver le changement du nombre de PODs déployés dans ACM (il peut se passer quelques temps avant le changement)
 
 {{%expand "Solution guidée" %}}
 

@@ -21,9 +21,9 @@ Acceder à l'interface RHACS et rendez vous dans la section Vulnerability Manage
 
 ## A vous de jouer 
 
-A partir de ces différents dashboard de bord nous vous demandons de retrouver et d'exporter tous les déploiements concernés par les CVE au format PDF.
+A partir de ces différents tableau de bord nous vous demandons de retrouver et d'exporter tous les déploiements concernés par les CVE au format PDF.
 
-Une fois cette étape terminée. Accédez à Configuration de la plateforme > Gestion des stratégies et cliquez sur Créer une policy. Vous remplirez le formulaire afin que toutes les images portant le CVE `CVE-2022-32207` soient bloquées lors des Stage Build and Deploy avec une méthode `Inform and Enforce`.
+Une fois cette étape terminée, accédez à Configuration de la plateforme > Gestion des stratégies et cliquez sur Créer une policy. Vous remplirez le formulaire afin que toutes les images portant le CVE `CVE-2022-32207` soient bloquées lors des Stage Build and Deploy avec une méthode `Inform and Enforce`.
 
 La policy doit répondre au critère suivant :
 

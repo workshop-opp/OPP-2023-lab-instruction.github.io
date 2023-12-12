@@ -1,5 +1,5 @@
 ---
-title: "CVE Management"
+title: "Gestion des CVE"
 draft: false
 weight: 2
 ---

@@ -34,7 +34,7 @@ Aller ensuite dans la partie **Applications**
 
 #### Exercice 1 : 
 __1 - Déploiement sur le cluster de développement__
-- Créer une application de type **Subscription**
+- Créer une application de type **Subscription**  (le type **Application Set** nécessiterait l'installation d'ArgoCD ce qui n'est pas l'objectif ici)
 - Son nom sera **<VOTRE_VILLE>-airports-frontend**
 - Son namespace sera **<VOTRE_VILLE>-ns**
 - Repository **Git** basé sur [https://github.com/workshop-opp/airports-frontend.git](https://github.com/workshop-opp/airports-frontend.git)

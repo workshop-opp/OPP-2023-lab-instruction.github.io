@@ -32,7 +32,7 @@ Then go to the **Applications** section
 ## Up to you
 
 1 - __Deployment on the development cluster__
-- Create a **Subscription** type application
+- Create a **Subscription** type application (**Application Set** type would need the installation of argoCD which is not what we want here)
 - Its name will be **<YOUR_CITY>-airports-frontend**
 - Its namespace will be **<YOUR_CITY>-ns**
 - Repository **Git** based on [airports-frontend](https://github.com/workshop-opp/airports-frontend.git)

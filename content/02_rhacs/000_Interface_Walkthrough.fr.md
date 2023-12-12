@@ -1,5 +1,5 @@
 ---
-title: "Interface Walkthrough"
+title: "Navigation dans l'interface"
 draft: false
 weight: 1
 ---

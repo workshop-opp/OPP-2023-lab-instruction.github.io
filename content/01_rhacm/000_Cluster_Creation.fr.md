@@ -1,5 +1,5 @@
 ---
-title: "Cluster creation"
+title: "Création de cluster"
 draft: false
 weight: 1
 ---

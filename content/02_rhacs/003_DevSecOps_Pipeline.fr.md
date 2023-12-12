@@ -1,17 +1,17 @@
 ---
-title: "DevSecOps Pipeline"
+title: "Pipeline DevSecOps"
 draft: false
 weight: 4
 ---
 
 
-Dans cette partie, nous allons voir comment RHACS peut totalement s'intègrer dans une approche DevSecOps.
+Dans cette partie, nous allons voir comment RHACS peut totalement s'intégrer dans une approche DevSecOps.
 
 
 ## Contexte
 
 
-L'équipe de développement utilise une pipeline pour  cloner un dépôt distant, build l'image et déployer l'application sur le cluster.  
+L'équipe de développement utilise une pipeline pour cloner un dépôt distant, construire l'image et déployer l'application sur le cluster.  
 Entre l'étape du build et du déploiement, nous avons 2 étapes parallèles : image-scan, image-check.
 Ces étapes permettent à RHACS de chercher les vulnérabilités présentes dans l'application.
 
@@ -23,7 +23,7 @@ L'objectif est de trouver quelle vulnérabilité critique est présente sur la p
 
 ## Etapes de l'exercice
 
-Pour commencer,allez sur le cluster hub, assurez-vous d'être dans **local-cluster**
+Pour commencer, allez sur le cluster hub, assurez-vous d'être dans **local-cluster**
 
 ![Pipelines](/OPP-2023-lab-instruction.github.io/images/acm-startconsole.png)
 

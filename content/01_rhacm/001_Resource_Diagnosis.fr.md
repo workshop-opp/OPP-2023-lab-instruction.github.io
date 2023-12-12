@@ -1,5 +1,5 @@
 ---
-title: "Observability"
+title: "Observabilité"
 draft: true
 weight: 0
 ---

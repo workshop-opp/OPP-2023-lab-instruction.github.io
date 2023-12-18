@@ -1,7 +1,7 @@
 ---
 title: "Deployment and management of an application"
 draft: false
-weight: 2
+weight: 3
 ---
 
 

@@ -115,8 +115,3 @@ Nous allons observer les mécanismes GitOps offerts par ACM : pour ce faire, il 
 - Enregistrer et commiter votre code
 - Oberver le changement du nombre de PODs déployés dans ACM (il peut se passer quelques temps avant le changement)
 
-{{%expand "Solution guidée" %}}
-
-TODO
-
-{{% /expand%}}

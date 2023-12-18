@@ -115,8 +115,3 @@ We will observe the GitOps mechanisms offered by ACM: to do this, you will **REQ
 - Change the number of replicas in the `k8s/deployment.yaml` file in YOUR account's repository
 - Observe the change in the number of PODs deployed
 
-{{%expand "Guided solution" %}}
-
-TODO
-
-{{% /expand%}}

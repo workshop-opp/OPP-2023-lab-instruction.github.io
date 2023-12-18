@@ -106,7 +106,4 @@ Vous pourrez alors observer le policy report de votre policyset.
 Pour valider, vous pouvez essayer de scale un déploiement jusqu'à 12 dans le namesapce **<VOTRE_VILLE>-ns** de l'un des clusters gérés pour vérifier l'effet des resourcesQuotas.
 {{% /notice %}}
 
-
-
-
 {{% /expand%}}

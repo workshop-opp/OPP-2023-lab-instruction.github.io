@@ -35,7 +35,6 @@ La policy doit répondre au critère suivant :
 | Response method | Inform and enforce |
 | Restrict-by-scope | **<VOTRE_VILLE>-ns** |
 | Cluster-scope | local-cluster |
-|----------|----------|
 
 ## Solution
 

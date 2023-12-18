@@ -22,7 +22,7 @@ Selectionner atelier-opp comme fournisseur d'authentification. Puis cliquez sur 
 
 ## Gestion des vulnérabilités
 
-La gestion des vulnérabilités fournit un dashboard où se trouve des informations importantes sur les application déployés sur le cluster. On y trouve principalement les vulnérabilités (CVE comprises), lesquelles sont les plus répandues ou les plus récentes, d'où proviennent les images Docker utilisés. Le dashboard fournit aussi les vulnérabilités présentes au sein du cluster.
+La gestion des vulnérabilités fournit un dashboard où se trouve des informations importantes sur les applications déployées sur le cluster. On y trouve principalement les vulnérabilités (CVE comprises), lesquelles sont les plus répandues ou les plus récentes, d'où proviennent les images Docker utilisées. Le dashboard fournit aussi les vulnérabilités présentes au sein du cluster.
 
 
 ![Vulnerabilités](/OPP-2023-lab-instruction.github.io/images/vuln_manag.png)

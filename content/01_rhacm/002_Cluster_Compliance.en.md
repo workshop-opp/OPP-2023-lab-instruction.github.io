@@ -6,7 +6,7 @@ weight: 2
 
 ## Context
 
-Following the deployment of our OpenShift clusters, we were asked to implement governance rules to ensure the security and performance of the environments. Among these rules, two specific policies have been defined: the "policy-checkclusteroperator" supervision policy aimed at ensuring that all cluster operators are in "ready" status, and the "policy-resourcequota-<YOUR_COUNTRY>" policy aimed at limiting the number of pods. deployed in the “<YOURCOUNTRY>-ns” namespace at 10.
+Following the deployment of our OpenShift clusters, we were asked to implement governance rules to ensure the security and performance of the environments. Among these rules, two specific policies have been defined: the "policy-checkclusteroperator" supervision policy aimed at ensuring that all cluster operators are in "ready" status, and the "policy-resourcequota-<YOUR_COUNTRY>" policy aimed at limiting the number of pods. deployed in the “<YOURCOUNTRY>-ns” namespace at 2.
 
 ## Objective of the exercise
 
@@ -85,6 +85,6 @@ In the placement Section, select **dev** and **prod**.
 
 Finally click on Submit.
 
-To validate you can try to scale a deployment up to 10 in one of the managed cluster to check the effect of resourcesQuotas.
+To validate you can try to scale a deployment up to 2 in one of the managed cluster to check the effect of resourcesQuotas.
 
 {{% /expand%}}

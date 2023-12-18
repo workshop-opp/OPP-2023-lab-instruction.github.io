@@ -64,6 +64,5 @@ You will then see all the deployments affected by our vulnerability appear. Then
 
 ![Policy-4](/OPP-2023-lab-instruction.github.io/images/create-policy-step-4.png)
 
-TODO: Add manifest to validate
 
 {{% /expand%}}

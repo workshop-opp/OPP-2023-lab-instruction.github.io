@@ -18,7 +18,7 @@ Selectionner atelier-opp comme fournisseur d'authentification. Puis cliquez sur 
 ![Login connexion](/OPP-2023-lab-instruction.github.io/images/login-workshop-opp.png)
 
 
-ICI 
+ 
  Authentifiez-vous avec votre utilisateur/mot de passe fourni par l'instructeur.
 
 

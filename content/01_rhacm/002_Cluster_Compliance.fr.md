@@ -47,7 +47,7 @@ spec:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
-          name: policy-resourcequota-example
+          name: policy-resourcequota-<VOTRE_VILLE>
         spec:
           namespaceSelector:
             include:

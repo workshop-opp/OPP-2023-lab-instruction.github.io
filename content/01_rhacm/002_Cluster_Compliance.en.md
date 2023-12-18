@@ -37,7 +37,7 @@ spec:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
-          name: policy-resourcequota-example
+          name: policy-resourcequota-<YOURCOUNTRY>
         spec:
           namespaceSelector:
             include:
@@ -51,7 +51,7 @@ spec:
                   name: example-resource-quota
                 spec:
                   hard:
-                    pods: "10"
+                    pods: "2"
           remediationAction: inform
           severity: medium
   remediationAction: enforce

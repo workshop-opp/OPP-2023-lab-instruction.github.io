@@ -50,7 +50,7 @@ Ainsi, cette fonctionnalité permettra de concentrer vos efforts sur les déploi
 ## Netwok Graph
 
 Le Network Graph est à la fois une vue des flux, et un générateur de NetworkPolicy.
-Sur l'interface Network Graph, vous pouvez explorer les flux du namespace "data-theft".
+Sur l'interface Network Graph, vous pouvez explorer les flux d'une application déjà déployés, en sélectionnant "local-cluster" puis le namespace "data-theft".
 Veuillez ne pas apportez de modification qui pourrait altérer le comportement de l'application.
 
 ![Network](/OPP-2023-lab-instruction.github.io/images/network.png)

@@ -9,7 +9,7 @@ Through this activity, we will quickly see the main features of Red Hat Advanced
 
 ## Connection to rhacs
 
-To access rhacs, click on the path menu at the top right and click on `Red Hat Advanced Cluster Security`.
+To access rhacs, click on the path menu at the top right and click on **Red Hat Advanced Cluster Security**.
 
 ![RHACS connection](/OPP-2023-lab-instruction.github.io/images/rhacs-connection.png)
 

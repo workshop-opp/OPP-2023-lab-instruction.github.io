@@ -51,11 +51,11 @@ Astuce : vous pouvez trouver l'ensemble des labels de chaque cluster dans le men
 
 {{%expand "Solution Exercice 1" %}}
 
-Remplissez le formulaire comme indiqué ci-dessous (en remplaçant `tokyo` par le nom de votre ville).
+Remplissez le formulaire comme indiqué ci-dessous (en remplaçant **tokyo** par le nom de votre ville).
 
 ![ACM Applications step 1](/OPP-2023-lab-instruction.github.io/images/create-application-step-1.png)
 
-Dans l'onglet Infrastructure, vous avez probablement remarqué qu'un label `environment=dev` a été appliquée au cluster de développement. C'est celui que nous allons utiliser.
+Dans l'onglet Infrastructure, vous avez probablement remarqué qu'un label **environment=dev** a été appliquée au cluster de développement. C'est celui que nous allons utiliser.
 
 
 Cliquez ensuite sur Créer en haut à droite.
@@ -64,7 +64,7 @@ Vous devez observer que le déploiement de votre application fonctionne bien dan
 
 ![Topology part 1 ](/OPP-2023-lab-instruction.github.io/images/topology-part1.png)
 
-En cliquant sur route puis sur `launch route url` , vous devriez voir l'application ci-dessous.
+En cliquant sur route puis sur **launch route url** , vous devriez voir l'application ci-dessous.
 
 ![Airport application sno dev](/OPP-2023-lab-instruction.github.io/images/airport-application-sno-dev.png)
 
@@ -89,7 +89,7 @@ Dans la section application, recherchez votre application créée précédemment
 
 ![Search application](/OPP-2023-lab-instruction.github.io/images/application-search.png)
 
-Cliquez sur Actions > Modifier l'application en haut à droite. Ouvrez ensuite la section Sélectionner les clusters pour le déploiement d'applications et cliquez sur `Deploy application resources on clusters with all specified labels`. Dans ClusterSet, utilisez à nouveau global et dans l'étiquette, sélectionnez deploy=acm.
+Cliquez sur Actions > Modifier l'application en haut à droite. Ouvrez ensuite la section Sélectionner les clusters pour le déploiement d'applications et cliquez sur **Deploy application resources on clusters with all specified labels**. Dans ClusterSet, utilisez à nouveau global et dans l'étiquette, sélectionnez deploy=acm.
 
 
 
@@ -110,7 +110,7 @@ Nous allons observer les mécanismes GitOps offerts par ACM : pour ce faire, il 
 - Connecter vous avec votre login personnel à [https://github.com](https://github.com)
 - Effectuez un fork du repository https://github.com/workshop-opp/airports-frontend
 - Modifier l'application **<VOTRE_USER>-airports-frontend** pour utiliser le repository que vous venez de forker (https://github.com/<VOTRE_USER_GITHUB/airports-frontend)
-- Modifier le nombre de replicas à 2 (au lieu de 1) dans le fichier `k8s/deployment.yaml` sur le repository de VOTRE compte
+- Modifier le nombre de replicas à 2 (au lieu de 1) dans le fichier **k8s/deployment.yaml** sur le repository de VOTRE compte
 - Enregistrer et commiter votre code
 - Oberver le changement du nombre de PODs déployés dans ACM (il peut se passer quelques temps avant le changement)
 

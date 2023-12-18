@@ -9,13 +9,13 @@ A travers cette activité, nous verrons rapidement les principales fonctionnalit
 
 ## Connexion à rhacs
 
-Pour accéder à rhacs, cliquez sur le path menu en haut à droite et cliquez sur `Red Hat Advanced Cluster Security`.
+Pour accéder à rhacs, cliquez sur le path menu en haut à droite et cliquez sur **Red Hat Advanced Cluster Security**.
 
 ![RHACS connexion](/OPP-2023-lab-instruction.github.io/images/rhacs-connection.png)
 
 Selectionner atelier-opp comme fournisseur d'authentification. Puis cliquez sur login.
 
-![Login connexion](/OPP-2023-lab-instruction.github.io/images/login-workshop-opp.png)
+![Login connexion](/OPP-2023-lab-instruction.github.io/images/workshop-opp.png)
 
  Authentifiez-vous avec votre utilisateur/mot de passe fourni par l'instructeur.
 

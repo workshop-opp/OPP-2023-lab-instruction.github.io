@@ -92,7 +92,7 @@ Check  Policy-checkclusteroperator et votre Policy nouvellement créée.
 
 ![Policy](/OPP-2023-lab-instruction.github.io/images/create-policyset.png)
 
-Dans la partie placement Section, select `dev` and `prod`.
+Dans la partie placement Section, select **dev** and **prod**.
 
 ![Policy](/OPP-2023-lab-instruction.github.io/images/placement.png)
 

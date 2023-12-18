@@ -34,7 +34,7 @@ La policy doit répondre au critère suivant :
 | Lifecycle stages| Build and Deploy |
 | Response method | Inform and enforce |
 | Restrict-by-scope | **<VOTRE_VILLE>-ns** |
-| Cluster | local-cluster |
+| Cluster-scope | local-cluster |
 |----------|----------|
 
 ## Solution

@@ -34,7 +34,7 @@ The policy must meet the following criterion:
 | Lifecycle internships | Build and Deploy |
 | Response method | Inform and enforce |
 | Restrict-by-scope | **<YOUR_CITY>-ns** |
-| Cluster | local-cluster |
+| Cluster-scope | local-cluster |
 |---------|---------|
 
 ## Solution

@@ -39,9 +39,9 @@ Jetons un coup d'œil à la vue Risques, où nous allons au-delà des bases des 
 ![Risk](/OPP-2023-lab-instruction.github.io/images/risk.png)
 
 
-Cette liste affiche les déploiements, dans tous les clusters et namespace, classés par priorité de risque.
+Cette liste affiche les déploiements, dans tous les clusters et namespaces, classés par priorité de risque.
 Le risque est calculé selon l'activité de l'application, son exposition, le nombre de déploiements et les CVE présentes.
-La vue est classé par odre de priorité.
+La vue est classée par odre de priorité.
 Ainsi, cette fonctionnalité permettra de concentrer vos efforts sur les déploiemments qui présente le plus de risques.
 
 

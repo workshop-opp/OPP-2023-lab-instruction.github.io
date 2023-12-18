@@ -6,7 +6,7 @@ weight: 2
 
 ## Contexte
 
-L'équipe de sécurité informatique a reçu une alerte concernant une nouvelle vulnérabilité critique (CVE) qui pourrait avoir un impact important sur les systèmes. Cette CVE affecte plusieurs  applications. Pour prévenir toute exploitation potentielle de cette vulnérabilité, il est crucial de détecter et d'empêcher tout nouveau déploiement d'application susceptible de la contenir.
+L'équipe de sécurité informatique a reçu une alerte concernant une nouvelle vulnérabilité critique (`CVE-2022-32207`) qui pourrait avoir un impact important sur les systèmes. Cette CVE affecte plusieurs  applications. Pour prévenir toute exploitation potentielle de cette vulnérabilité, il est crucial de détecter et d'empêcher tout nouveau déploiement d'application susceptible de la contenir.
 
 ## Objectif de l'exercice
 
@@ -14,18 +14,18 @@ L'objectif principal est de mettre en place une politique de sécurité qui bloq
 
 ## Étapes de l’exercice
 
-Acceder à l'interface RHACS et rendez vous dans la section Vulnerability Management. Cette interface vous donne une visibilite sur l'ensemble des images appartenant à votre scope.
+Accédez à l'interface RHACS et rendez-vous dans la section Gestion des vulnérabilités. Cette interface vous donne une visibilité sur toutes les images appartenant à votre scope.
 
 ![Dashboard](/OPP-2023-lab-instruction.github.io/images/dashboard-vulnerability-management.png)
 
 
 ## A vous de jouer 
 
-A partir de ces différents tableau de bord nous vous demandons de retrouver et d'exporter tous les déploiements concernés par les CVE au format PDF.
+A partir de ces différents tableau de bord nous vous demandons de retrouver et d'exporter tous les déploiements concernés par la CVE `CVE-2022-32207` au format PDF.
 
-Une fois cette étape terminée, accédez à Configuration de la plateforme > Gestion des stratégies et cliquez sur Créer une policy. Vous remplirez le formulaire afin que toutes les images portant le CVE `CVE-2022-32207` soient bloquées lors des Stage Build and Deploy avec une méthode `Inform and Enforce`.
+Une fois cette étape terminée, accédez à Configuration de la plateforme > Gestion des stratégies et cliquez sur Créer une policy. Vous remplirez le formulaire afin que toutes les images portant la CVE `CVE-2022-32207` soient bloquées lors des Stage Build and Deploy avec une méthode **Inform and Enforce**.
 
-La policy doit répondre au critère suivant :
+La policy doit répondre aux critères suivant :
 
 | Parameters | Value |
 |----------|----------|
@@ -63,7 +63,6 @@ Vous verrez alors apparaître tous les déploiements concernés par notre vulné
 
 ![Policy-4](/OPP-2023-lab-instruction.github.io/images/create-policy-step-4.png)
 
-TODO: Add manifest to validate
 
 {{% /expand%}}
 

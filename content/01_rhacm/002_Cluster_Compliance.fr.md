@@ -61,7 +61,7 @@ spec:
                   name: example-resource-quota
                 spec:
                   hard:
-                    pods: "10"
+                    pods: "2"
           remediationAction: inform
           severity: medium
   remediationAction: enforce

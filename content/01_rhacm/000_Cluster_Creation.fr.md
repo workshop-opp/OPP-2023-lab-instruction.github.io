@@ -29,13 +29,8 @@ Dans les conditions préalables à ce cours, les informations d'identification A
 |----------|----------|
 | Région | eu-west-2 |
 
-Ensuite nous modifierons directement le fichier yaml pour créer un SNO au lieu d'un cluster Openshift complet.
-
-Pour ce faire, activez le toggle pour obtenir « Yaml : On » et cliquez sur le dossier install-config.
-
 ![Yaml activé](/OPP-2023-lab-instruction.github.io/images/yaml-on.png)
 
-Mettez ensuite à jour les controle plane replicas de 3 à 1 et les worker replicas de 3 à 0.
 
 - Cliquez maintenant sur Suivant, jusqu'à la révision, et enfin cliquez sur Créer.
 

@@ -29,14 +29,10 @@ In prerequisites to this course, aws credentials have been created from access k
 |----------|----------|
 | Region | eu-west-2 |
 
-Then we will modify directly the yaml file to create an SNO instead of a full Openshift Cluster.
-
-To make that switch the toggle to get `Yaml: On` and click on install-config folder.
 
 ![Yaml On](/OPP-2023-lab-instruction.github.io/images/yaml-on.png)
 
 Then Update master replicas from 3 to 1 and worker replicas from 3 to 0.
-
 You should now have the below install config.yaml.
 
 - Now click Next, until the review, and Finally Click on Create.

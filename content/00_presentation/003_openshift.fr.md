@@ -17,11 +17,18 @@ weight: 4
 ![Service RHPDS](/OPP-2023-lab-instruction.github.io/images/aws-blank-open.png)
 
 
-## Détails du cluster OpenShift
+## Détails du cluster OpenShift Hub
 
-* **URL de la console du cluster OCP :** `https://console-openshift-console.apps.workshop-opp.sandbox2156.opentlc.com`
+* **URL de la console du cluster OCP Hub :** `https://console-openshift-console.apps.workshop-opp.sandbox2156.opentlc.com`
 
 * **URL de l'API du cluster OCP :** `https://api.workshop-opp.sandbox2156.opentlc.com:6443`
+
+## Détails des clusters OpenShift dev et prod
+
+* **URL de la console du cluster OCP dev :** `https://console-openshift-console.apps.sno-dev.sandbox2156.opentlc.com/`
+
+* **URL de la console du cluster OCP prod :** `https://console-openshift-console.apps.sno-prod.sandbox2156.opentlc.com/`
+
 
 Il existe un utilisateur OpenShift dédié pour chaque utilisateur.
 

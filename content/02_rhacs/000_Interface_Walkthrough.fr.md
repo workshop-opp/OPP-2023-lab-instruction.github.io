@@ -15,7 +15,7 @@ Pour accéder à rhacs, cliquez sur le path menu en haut à droite et cliquez su
 
 Selectionner atelier-opp comme fournisseur d'authentification. Puis cliquez sur login.
 
-![Login connexion](/OPP-2023-lab-instruction.github.io/images/workshop-opp.png)
+![Login connexion](/OPP-2023-lab-instruction.github.io/images/login-workshop-opp.png)
 
  Authentifiez-vous avec votre utilisateur/mot de passe fourni par l'instructeur.
 

@@ -7,7 +7,7 @@ weight: 1
 
 A travers cette activité, nous verrons rapidement les principales fonctionnalités de Red Hat Advanced Cluster Security
 
-## Connexion à rhacs
+## Connexion à RHACS
 
 Pour accéder à rhacs, cliquez sur le path menu en haut à droite et cliquez sur **Red Hat Advanced Cluster Security**.
 
@@ -33,16 +33,15 @@ La gestion des vulnérabilités fournit un dashboard où se trouve des informati
 ## Gestion des risques
 
 
-Jetons un coup d'œil à la vue Risques, où nous allons au-delà des bases des vulnérabilités pour comprendre comment la configuration du déploiement et l'activité d'exécution affectent la probabilité qu'un exploit se produise.
+Cette liste affiche les déploiements, dans tous les clusters et namespaces, classés par priorité de risque.
+Le risque est calculé selon l'activité de l'application, son exposition, le nombre de déploiements et les CVE présentes.
+La vue est classée par odre de priorité.
+Ainsi, cette fonctionnalité permettra de concentrer vos efforts sur les déploiemments qui présente le plus de risques.
 
 
 ![Risk](/OPP-2023-lab-instruction.github.io/images/risk.png)
 
 
-Cette liste affiche les déploiements, dans tous les clusters et namespaces, classés par priorité de risque.
-Le risque est calculé selon l'activité de l'application, son exposition, le nombre de déploiements et les CVE présentes.
-La vue est classée par odre de priorité.
-Ainsi, cette fonctionnalité permettra de concentrer vos efforts sur les déploiemments qui présente le plus de risques.
 
 
 

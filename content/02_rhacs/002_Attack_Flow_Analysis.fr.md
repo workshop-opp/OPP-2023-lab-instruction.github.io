@@ -48,7 +48,7 @@ L'objectif est atteint quand vous trouvez l'URL du **Request Bin** utilisé par 
 Indices :
 
 - Commencez par la section **Violations** et filtrez la vue avec `deployment:visa-processor namespace:data-theft`
-- Basculez sur la section **Network Graph** et affichez les flux du cluster **local-cluster**, namespace **data-theft**. Cliquez sur les déploiements **information-service** et **back-office** et comparez leur flux. Lequel vous semble le plus suspicieux ?
+- Basculez sur la section **Network Graph V2** et affichez les flux du cluster **local-cluster**, namespace **data-theft**. Cliquez sur les déploiements **information-service** et **back-office** et comparez leur flux. Lequel vous semble le plus suspicieux ?
 - Retournez dans la section **Violations** et filtrez la vue avec le nom du déploiement qui vous semble le plus suspicieux.
 
 ## Solution

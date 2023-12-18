@@ -6,7 +6,7 @@ weight: 2
 
 ## Contexte
 
-Suite au déploiement de nos clusters OpenShift, il nous a été demandé de mettre en place des règles de gouvernance pour assurer le bon fonctionnement des environnements. Parmi ces règles, deux politiques spécifiques ont été définies : la politique de supervision **policy-checkclusteroperator** visant à garantir que tous les opérateurs de clusters sont en statut "ready", et la politique **policy-resourcequota-<VOTRE_VILLE>** visant à limiter le nombre de pods déployé dans le namespace **<VOTRE_VILLE>-ns** à 10.
+Suite au déploiement de nos clusters OpenShift, il nous a été demandé de mettre en place des règles de gouvernance pour assurer le bon fonctionnement des environnements. Parmi ces règles, deux politiques spécifiques ont été définies : la politique de supervision **policy-checkclusteroperator** visant à garantir que tous les opérateurs de clusters sont en statut "ready", et la politique **policy-resourcequota-<VOTRE_VILLE>** visant à limiter le nombre de pods déployé dans le namespace **<VOTRE_VILLE>-ns** à 2.
 
 ## Objectif de l'exercice
 
@@ -75,11 +75,12 @@ Cela remplit automatiquement le formulaire. Après avoir compris le fonctionneme
 
 ## A vous de jouer 
 
-À partir de votre nouvelle policy et de la policy policy-checkclusteroperator, créez un nouveau PolicySet **policyset-<VOTRE_VILLE>** qui vous permettra d'appliquer vos politiques au cluster sno-prod et sno-dev. 
-
 {{% notice tip %}}
 Vous utiliserez le namespace de policy-management lorsqu’on vous demandera un namespace.
 {{% /notice %}}
+
+À partir de votre nouvelle policy et de la policy policy-checkclusteroperator, créez un nouveau PolicySet **policyset-<VOTRE_VILLE>** qui vous permettra d'appliquer vos politiques au cluster sno-prod et sno-dev. 
+
 
 
 ## Solution

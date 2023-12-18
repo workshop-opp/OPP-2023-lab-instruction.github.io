@@ -91,8 +91,6 @@ Cette fonctionnalité utilise OpenSCAP, un outil certifié NIST, pour analyser e
 
 
 
-Cliquez sur « Analyse de l'environnement »
-
 
 ![Compliance_Operator](/OPP-2023-lab-instruction.github.io/images/compliance.png)
 

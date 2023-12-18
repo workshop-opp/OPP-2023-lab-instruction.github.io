@@ -47,7 +47,7 @@ The objective is achieved when you find the URL of the **Request Bin** used by t
 Clues:
 
 - Start with the **Violations** section and filter the view with `deployment:visa-processor namespace:data-theft`
-- Switch to the **Network Graph** section and display the flows of the cluster **local-cluster**, namespace **data-theft**. Click on the **information-service** and **back-office** deployments and compare their flows. Which one seems most suspicious to you?
+- Switch to the **Network Graph V2** section and display the flows of the cluster **local-cluster**, namespace **data-theft**. Click on the **information-service** and **back-office** deployments and compare their flows. Which one seems most suspicious to you?
 - Return to the **Violations** section and filter the view with the name of the deployment that seems most suspicious to you.
 
 ## Solution

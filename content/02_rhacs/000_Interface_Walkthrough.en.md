@@ -89,10 +89,6 @@ The Compliance Operator evaluates both Kubernetes API resources and Openshift re
 This feature uses OpenSCAP, a NIST-certified tool, to analyze and enforce security policies provided by content.
 
 
-
-Click “Environmental Scan”
-
-
 ![Compliance_Operator](/OPP-2023-lab-instruction.github.io/images/compliance.png)
 
 

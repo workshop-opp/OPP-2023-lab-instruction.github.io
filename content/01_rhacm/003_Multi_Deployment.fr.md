@@ -57,7 +57,6 @@ Remplissez le formulaire comme indiqué ci-dessous (en remplaçant `tokyo` par l
 
 Dans l'onglet Infrastructure, vous avez probablement remarqué qu'un label `environment=dev` a été appliquée au cluster de développement. C'est celui que nous allons utiliser.
 
-![ACM Applications step 2](/OPP-2023-lab-instruction.github.io/images/create-application-part-2.png)
 
 Cliquez ensuite sur Créer en haut à droite.
 
